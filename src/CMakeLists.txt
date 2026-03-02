@@ -22,6 +22,7 @@ file(GLOB OPERATOR_UIS SDKDemoOperator/*.ui)
 file(GLOB UIS *.ui subcontrol/*.ui ${COMMON_UIS} ${FREESCAN_UIS} ${OPTIMSCAN_UIS} ${EINSCAN_UIS} ${OPERATOR_UIS})
 file(GLOB RESOURCES *.qrc)
 add_executable(${TARGET_NAME} ${HEADERS} ${SOURCES} ${UIS} ${RESOURCES})
+find_package(Qt5 COMPONENTS OpenGL REQUIRED)
 if(CUSTOMER_MODE)
 	target_include_directories(${TARGET_NAME} PUBLIC
 		subcontrol
@@ -44,9 +45,9 @@ set_target_properties(${TARGET_NAME} PROPERTIES LINK_FLAGS_RELEASE "/SUBSYSTEM:W
 target_link_libraries(${TARGET_NAME} Qt5::Core Qt5::Gui Qt5::Widgets glogc SDKCWrapper 	${_ZeroMQ_LIB})
 if(CUSTOMER_MODE)
 	target_link_directories(${TARGET_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../../lib)
-	target_link_libraries(${TARGET_NAME} Qt5::Core Qt5::Gui Qt5::Widgets glogc.lib SDKCWrapper.lib SDKCWrapper.lib SDKSocketWrapper.lib SDKModBusWrapper.lib)
+	target_link_libraries(${TARGET_NAME} Qt5::Core Qt5::Gui Qt5::Widgets Qt5::OpenGL glogc.lib SDKCWrapper.lib SDKCWrapper.lib SDKSocketWrapper.lib SDKModBusWrapper.lib)
 else()
-	target_link_libraries(${TARGET_NAME} Qt5::Core Qt5::Gui Qt5::Widgets glogc SDKCWrapper)
+	target_link_libraries(${TARGET_NAME} Qt5::Core Qt5::Gui Qt5::Widgets Qt5::OpenGL glogc SDKCWrapper)
 endif()
 target_compile_definitions(${TARGET_NAME}
     PRIVATE

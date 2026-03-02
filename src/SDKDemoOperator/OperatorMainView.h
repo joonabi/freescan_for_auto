@@ -9,16 +9,22 @@
 #include <QProgressBar>
 #include <QStackedWidget>
 #include <QSettings>
+#include <QTimer>
 #include <atomic>
 
 class Sn3DSDKDemoApp;
+class MeshViewerWidget;
 
 // ─────────────────────────────────────────────────────────────────
-// OperatorMainView
-//   - 운영자 전용 메인 창 (최소화된 UI)
-//   - 기존 Sn3DSDKFreeScanMainView 를 대체
-//   - Page 0 : 시작 화면 (로고 + 3개 버튼)
-//   - Page 1 : 스캔 화면 (카메라 미리보기 + 상태 + 제어)
+// OperatorMainView  –  3페이지 운영자 메인 창
+//
+//  Page 0 : 프리셋 선택  (부품별 큰 버튼 그리드)
+//  Page 1 : 스캔 화면    (카메라 + 상태 + 제어)
+//  Page 2 : 결과 미리보기 (3D MeshViewer + 저장/재스캔)
+//
+//  시뮬레이션 모드
+//    SDK 초기화가 실패하면 자동으로 활성화.
+//    실제 스캐너 없이 실행 파일만으로 UI 흐름 테스트 가능.
 // ─────────────────────────────────────────────────────────────────
 class OperatorMainView : public Sn3DSDKMainViewBase
 {
@@ -29,27 +35,30 @@ public:
 
     void closeEvent(QCloseEvent* event) override;
 
-    // SDK 전역 콜백에서 호출 (외부 C 콜백 → 멤버 함수)
+    // SDK 전역 콜백 → 멤버 함수로 전달
     void videoCallBack(int camId, const unsigned char* data,
                        int width, int height, int channel);
 
 Q_SIGNALS:
-    // 카메라 영상 전달용 (스레드 경계 넘기기)
     void sigGetVideoData(int camId, const unsigned char* data,
                          int width, int height, int channel);
 
 private Q_SLOTS:
-    // ── 시작 화면 버튼 ──────────────────────────────────────────
-    void onBtnNewProjectClicked();   // 프로젝트 생성
-    void onBtnOpenProjectClicked();  // 프로젝트 열기
-    void onBtnPresetClicked();       // 프리셋 설정
+    // ── Page 0 : 프리셋 선택 ──────────────────────────────────────
+    void onPresetSelected(int index);       // 프리셋 버튼 클릭
+    void onBtnManagePresetClicked();        // 프리셋 관리 다이얼로그
+    void refreshPresetButtons();            // PresetManager → 버튼 재구성
 
-    // ── 스캔 화면 버튼 ──────────────────────────────────────────
-    void onBtnScanCtrlClicked();     // 프리스캔/스캔시작/일시정지/계속
-    void onBtnEndScanClicked();      // 스캔 완료
-    void onBtnBackClicked();         // 처음 화면으로
+    // ── Page 1 : 스캔 화면 ────────────────────────────────────────
+    void onBtnScanCtrlClicked();            // 프리스캔/스캔/일시정지/계속
+    void onBtnEndScanClicked();             // 스캔 종료 → 자동 메시·저장
+    void onBtnCancelScanClicked();          // 취소 → Page 0
 
-    // ── Sn3DSDKDemoApp 시그널 수신 ──────────────────────────────
+    // ── Page 2 : 결과 미리보기 ────────────────────────────────────
+    void onBtnSaveOkClicked();              // 저장 완료 → Page 0
+    void onBtnRescanClicked();              // 재스캔 → 새 폴더 → Page 1
+
+    // ── Sn3DSDKDemoApp 시그널 ──────────────────────────────────────
     void onSnMessageReceived(QVariantMap mapParam);
     void onNewProjFinished(QStringList projNameList);
     void onShowProgress(QString title, double value, bool visible);
@@ -57,52 +66,78 @@ private Q_SLOTS:
     void onFrameRateChanged(int rate);
     void onTrackLostStatusChanged(bool lost);
     void onScanDistChanged(double dist);
+    void onMeshDataReturn(bool success);
+    void onSaveMeshDataReturn(bool success);
+
+    // ── 시뮬레이션 타이머 ─────────────────────────────────────────
+    void onSimTimerTick();
 
 private:
-    // ── UI 초기화 ───────────────────────────────────────────────
-    void buildStartPage();
+    // ── UI 구성 ───────────────────────────────────────────────────
+    void buildPresetPage();
     void buildScanPage();
+    void buildPreviewPage();
     void applyGlobalStyle();
 
-    // ── 동작 헬퍼 ───────────────────────────────────────────────
-    bool  initSDK(const ScanPreset& preset);       // Sn3DInitialize + 콜백 등록 + 설정 적용
-    bool  createAndEnterProject(const ScanPreset& preset);  // NewProject + EnterScan
-    void  enterScanPage();                         // 스캔 화면으로 전환
-    void  updateScanCtrlButton();                  // 상태에 따라 버튼 텍스트 변경
-    void  updateStatusArea(const QString& msg, const QString& color = "#00FF00");
-    void  releaseSDK();
+    // ── 스캔 흐름 헬퍼 ───────────────────────────────────────────
+    bool initSDK(const ScanPreset& preset);
+    void createProject();
+    void enterScanPage();
+    void doAutoMesh();
+    void doAutoSave();
+    void showPreviewPage();
+    void updateScanCtrlButton();
+    void updatePresetStatus(const QString& msg, const QString& color = "#888888");
+    void releaseSDK();
 
     QString generateProjectPath(const ScanPreset& preset) const;
+    QString deviceTypeStr(int type) const;
 
-    // ── 앱 / 상태 ───────────────────────────────────────────────
+    // ── 시뮬레이션 헬퍼 ──────────────────────────────────────────
+    void runSimEndScan();   // 종료 시뮬레이션 (진행바 → 미리보기)
+
+    // ── 앱 / 상태 ────────────────────────────────────────────────
     Sn3DSDKDemoApp* m_demoApp        = nullptr;
     ScanStep        m_scanStep;
     ScanPreset      m_activePreset;
     QSettings*      m_settings       = nullptr;
     bool            m_sdkInitialized = false;
+    bool            m_simMode        = false;
+    QString         m_currentProjectPath;
+    int             m_lastPointCount = 0;
 
-    // ── 전체 스택 ───────────────────────────────────────────────
+    // ── 스택 위젯 ─────────────────────────────────────────────────
     QStackedWidget* m_stack = nullptr;
 
-    // ── Page 0 : 시작 화면 ──────────────────────────────────────
-    QWidget*     m_startPage  = nullptr;
-    QLabel*      m_logoLabel  = nullptr;   // 회사명 / 로고
-    QPushButton* m_btnNewProj = nullptr;
-    QPushButton* m_btnOpenProj= nullptr;
-    QPushButton* m_btnPreset  = nullptr;
-    QLabel*      m_startStatus= nullptr;   // 하단 상태 메시지
+    // ── Page 0 : 프리셋 선택 ──────────────────────────────────────
+    QWidget* m_presetPage   = nullptr;
+    QWidget* m_presetGrid   = nullptr;   // 버튼 그리드 컨테이너
+    QLabel*  m_presetStatus = nullptr;   // 하단 상태 메시지
+    QLabel*  m_simBadge0    = nullptr;   // "[시뮬레이션 모드]" 배지
 
-    // ── Page 1 : 스캔 화면 ──────────────────────────────────────
-    QWidget*     m_scanPage   = nullptr;
-    QLabel*      m_leftCamLbl = nullptr;   // 왼쪽 카메라 영상
-    QLabel*      m_rightCamLbl= nullptr;   // 오른쪽 카메라 영상
-    QLabel*      m_stateLbl   = nullptr;   // 현재 스캔 상태
-    QLabel*      m_trackLbl   = nullptr;   // 추적 상태
-    QLabel*      m_pointLbl   = nullptr;   // 포인트 수
-    QLabel*      m_fpsLbl     = nullptr;   // 프레임레이트
-    QLabel*      m_distLbl    = nullptr;   // 스캔 거리
-    QProgressBar*m_progressBar= nullptr;  // 작업 진행률
-    QPushButton* m_btnScanCtrl= nullptr;  // 프리스캔/스캔/일시정지/계속
-    QPushButton* m_btnEndScan = nullptr;  // 스캔 완료
-    QPushButton* m_btnBack    = nullptr;  // 시작 화면으로
+    // ── Page 1 : 스캔 화면 ────────────────────────────────────────
+    QWidget*      m_scanPage    = nullptr;
+    QLabel*       m_leftCamLbl  = nullptr;
+    QLabel*       m_rightCamLbl = nullptr;
+    QLabel*       m_stateLbl    = nullptr;
+    QLabel*       m_trackLbl    = nullptr;
+    QLabel*       m_pointLbl    = nullptr;
+    QLabel*       m_fpsLbl      = nullptr;
+    QLabel*       m_distLbl     = nullptr;
+    QProgressBar* m_progressBar = nullptr;
+    QPushButton*  m_btnScanCtrl = nullptr;
+    QPushButton*  m_btnEndScan  = nullptr;
+    QPushButton*  m_btnCancel   = nullptr;
+    QLabel*       m_simBadge1   = nullptr;   // "[시뮬레이션 모드]" 배지
+
+    // ── Page 2 : 결과 미리보기 ────────────────────────────────────
+    QWidget*          m_previewPage = nullptr;
+    MeshViewerWidget* m_meshViewer  = nullptr;
+    QLabel*           m_previewInfo = nullptr;
+    QPushButton*      m_btnSaveOk   = nullptr;
+    QPushButton*      m_btnRescan   = nullptr;
+
+    // ── 시뮬레이션 타이머 ─────────────────────────────────────────
+    QTimer* m_simTimer     = nullptr;
+    int     m_simTickCount = 0;
 };
