@@ -400,10 +400,12 @@ void OperatorMainView::onBtnOpenProjectClicked()
     QString modeStr   = isLaser ? "laser" : "ir";
     QString deviceStr;
     switch (m_activePreset.deviceType) {
-    case SNSDK_DEVTYPE_UEPRO:  deviceStr = "uep";   break;
-    case SNSDK_DEVTYPE_COMBO:  deviceStr = "combo"; break;
-    case SNSDK_DEVTYPE_TRIO:   deviceStr = "trio";  break;
-    default:                   deviceStr = "*";     break;
+    case SNSDK_DEVTYPE_UEPRO:    deviceStr = "uep";       break;
+    case SNSDK_DEVTYPE_COMBO:    deviceStr = "combo";     break;
+    case SNSDK_DEVTYPE_TRIO:     deviceStr = "trio";      break;
+    case SNSDK_DEVTYPE_UEP2:     deviceStr = "uep2";      break;
+    case SNSDK_DEVTYPE_COMBOPLUS:deviceStr = "comboplus";  break;
+    default:                     deviceStr = "*";         break;
     }
     QString filter = QString("*.sln_%1_%2").arg(modeStr, deviceStr);
 
