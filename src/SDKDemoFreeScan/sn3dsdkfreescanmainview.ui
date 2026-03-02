@@ -1,0 +1,2370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Sn3DSDKFreeScanMainView</class>
+ <widget class="Sn3DSDKMainViewBase" name="Sn3DSDKFreeScanMainView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1160</width>
+    <height>809</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sn3DSDKMainView</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_12">
+   <item>
+    <widget class="QTabWidget" name="tab">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="interfaceTab">
+      <attribute name="title">
+       <string>Interface</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widTop" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>78</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>78</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="lblLogo">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnScannerTab">
+            <property name="text">
+             <string>Scanner</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnCalibrateTab">
+            <property name="text">
+             <string>Calibrate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnScanTab">
+            <property name="text">
+             <string>Scan</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_23">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>100</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnPostProcess">
+            <property name="text">
+             <string>PostProcess</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>179</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackPage">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>65</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>65</height>
+          </size>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="pageScanner">
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>369</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnOpenService">
+             <property name="text">
+              <string>OpenService</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnCloseService">
+             <property name="text">
+              <string>CloseService</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnCheckDevice">
+             <property name="text">
+              <string>CheckDeviceOnline</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnReconnectDevice">
+             <property name="text">
+              <string>ReconnectDevice</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnSendPing">
+             <property name="text">
+              <string>SendPing</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>369</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageCalibrate">
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="horizontalSpacer_14">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>280</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnEnterCalib">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>EnterCalib</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnStartCalib">
+             <property name="text">
+              <string>StartCalib</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>279</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageScan">
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>41</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnEnterScan">
+             <property name="text">
+              <string>EnterScan</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnNewProject">
+             <property name="text">
+              <string>NewProject</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnOpenProject">
+             <property name="text">
+              <string>OpenProject</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="text">
+              <string>ExitScan</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_9">
+             <property name="text">
+              <string>ScanSetting</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_10">
+             <property name="text">
+              <string>SetClipPlane</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnScan">
+             <property name="text">
+              <string>Scan</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnCancelScan">
+             <property name="text">
+              <string>CancelScan</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnEndScan">
+             <property name="text">
+              <string>EndScan</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnSavePointCloud">
+             <property name="text">
+              <string>SavePointCloud</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnMesh">
+             <property name="text">
+              <string>Mesh</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnOptimizedMesh">
+             <property name="text">
+              <string>optimizedMesh</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBox_5">
+             <property name="text">
+              <string>DumpMemory</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>41</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="widget_8" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_7">
+                  <property name="text">
+                   <string>Left camera</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>253</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="Sn3DCameraWidget" name="leftCameraWidget" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="widget_11" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>Rigtht camera</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>242</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="Sn3DCameraWidget" name="rightCameraWidget" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_7" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="widget_13" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>Texture camera</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>235</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="Sn3DCameraWidget" name="textureCameraWidget" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_5" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Point Distance:0.5 FrameRate:0 PointCount:0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_6" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>220</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>220</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widMsgSwitch" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="chkSendMsg">
+               <property name="text">
+                <string>Send message</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkRecvMsg">
+               <property name="text">
+                <string>Receive message</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkErrorMsg">
+               <property name="text">
+                <string>Error message</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkInternalLog">
+               <property name="text">
+                <string>Internal log</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>620</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="textBrowser"/>
+          </item>
+          <item>
+           <widget class="QWidget" name="widProgress" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>321</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="lblProgressPrompt">
+               <property name="text">
+                <string>Loading...</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressPercent">
+               <property name="value">
+                <number>0</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>321</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widStatusBar" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>DeviceStatus:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>--</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>DeviceSeries:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>--</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="socketTab">
+      <attribute name="title">
+       <string>Socket</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>IP:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="sockeIPLEdit">
+           <property name="text">
+            <string>127.0.0.1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Port:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="socketPortLEdit">
+           <property name="text">
+            <string>3001</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="socketConnectBtn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Connect</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="disconnectBtn">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Disconnect</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <spacer name="horizontalSpacer_19">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="socketInitialBtn">
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Initial</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="socketReleaseBtn">
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Release</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_20">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Send</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <spacer name="horizontalSpacer_18">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="sendBtn">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Send</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="QTextEdit" name="socketSendTEdit">
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;{&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;pageName&amp;quot;: &amp;quot;device&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;name&amp;quot;:&amp;quot;Device&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;info&amp;quot;: &amp;quot;offline&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;infoTipImg&amp;quot;: &amp;quot;&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;infoTip&amp;quot;: &amp;quot;&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;infoTipTextVisible&amp;quot;: false,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;infoTipVisible&amp;quot;: false,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;navgateEnable&amp;quot;:false,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;pageSourceUrl&amp;quot;:&amp;quot;qrc:/views/E7Calibration.qml&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;itemSourceUrl&amp;quot;:&amp;quot;ReconnectButton&amp;quot;,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;itemVisible&amp;quot;: false,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;    &amp;quot;showExPage&amp;quot;: false&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'SimSun'; font-size:11pt;&quot;&gt;}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Receive</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0">
+             <widget class="QTextEdit" name="socketReceiveTEdit"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabModbus">
+      <attribute name="title">
+       <string>Modbus</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="QWidget" name="widget_15" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget_16" native="true">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="lblModbus">
+               <property name="text">
+                <string>Modbus control:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnInitializeModbus">
+               <property name="text">
+                <string>Initialize</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnReleaseModbus">
+               <property name="text">
+                <string>Release</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_21">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>938</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QWidget" name="widget_10" native="true">
+               <layout class="QHBoxLayout" name="horizontalLayout_17">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QWidget" name="widget_9" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_2">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="widget_12" native="true">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_19">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_12">
+                        <property name="text">
+                         <string>ServerConnectType:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="cboConnType"/>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_13">
+                        <property name="text">
+                         <string>Port:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="txtServer"/>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="spinAddr"/>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btnConnect">
+                        <property name="text">
+                         <string>Connect</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_14" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_20">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QCheckBox" name="chkBusy">
+                        <property name="text">
+                         <string>Set server busy</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QCheckBox" name="chkListenOnly">
+                        <property name="text">
+                         <string>Set server listen only</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_22">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_31" native="true">
+                     <layout class="QGridLayout" name="gridLayout">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_15">
+                        <property name="text">
+                         <string>Coils</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLabel" name="label_16">
+                        <property name="text">
+                         <string>Discrete</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="2">
+                       <widget class="QLabel" name="label_17">
+                        <property name="text">
+                         <string>Inputs Address</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="3">
+                       <widget class="QLabel" name="label_18">
+                        <property name="text">
+                         <string>Input Registers</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="4">
+                       <widget class="QLabel" name="label_19">
+                        <property name="text">
+                         <string>Holding Registers</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QCheckBox" name="coils_0">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QCheckBox" name="disc_0">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="2">
+                       <widget class="QLabel" name="label_20">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="3">
+                       <widget class="QLineEdit" name="inReg_0">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="4">
+                       <widget class="QLineEdit" name="holdReg_0">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QCheckBox" name="coils_1">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <widget class="QCheckBox" name="disc_1">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="2">
+                       <widget class="QLabel" name="label_21">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="3">
+                       <widget class="QLineEdit" name="inReg_1">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="4">
+                       <widget class="QLineEdit" name="holdReg_1">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QCheckBox" name="coils_2">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="1">
+                       <widget class="QCheckBox" name="disc_2">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="2">
+                       <widget class="QLabel" name="label_22">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="3">
+                       <widget class="QLineEdit" name="inReg_2">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="4">
+                       <widget class="QLineEdit" name="holdReg_2">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="0">
+                       <widget class="QCheckBox" name="coils_3">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="1">
+                       <widget class="QCheckBox" name="disc_3">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="2">
+                       <widget class="QLabel" name="label_23">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="3">
+                       <widget class="QLineEdit" name="inReg_3">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="4" column="4">
+                       <widget class="QLineEdit" name="holdReg_3">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="0">
+                       <widget class="QCheckBox" name="coils_4">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="1">
+                       <widget class="QCheckBox" name="disc_4">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="2">
+                       <widget class="QLabel" name="label_24">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="3">
+                       <widget class="QLineEdit" name="inReg_4">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="5" column="4">
+                       <widget class="QLineEdit" name="holdReg_4">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="0">
+                       <widget class="QCheckBox" name="coils_5">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="1">
+                       <widget class="QCheckBox" name="disc_5">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="2">
+                       <widget class="QLabel" name="label_25">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="3">
+                       <widget class="QLineEdit" name="inReg_5">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="6" column="4">
+                       <widget class="QLineEdit" name="holdReg_5">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="0">
+                       <widget class="QCheckBox" name="coils_6">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="1">
+                       <widget class="QCheckBox" name="disc_6">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="2">
+                       <widget class="QLabel" name="label_26">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="3">
+                       <widget class="QLineEdit" name="inReg_6">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="7" column="4">
+                       <widget class="QLineEdit" name="holdReg_6">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="8" column="0">
+                       <widget class="QCheckBox" name="coils_7">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="8" column="1">
+                       <widget class="QCheckBox" name="disc_7">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="8" column="2">
+                       <widget class="QLabel" name="label_27">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="8" column="3">
+                       <widget class="QLineEdit" name="inReg_7">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="8" column="4">
+                       <widget class="QLineEdit" name="holdReg_7">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="9" column="0">
+                       <widget class="QCheckBox" name="coils_8">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="9" column="1">
+                       <widget class="QCheckBox" name="disc_8">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="9" column="2">
+                       <widget class="QLabel" name="label_28">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="9" column="3">
+                       <widget class="QLineEdit" name="inReg_8">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="9" column="4">
+                       <widget class="QLineEdit" name="holdReg_8">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="10" column="0">
+                       <widget class="QCheckBox" name="coils_9">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="10" column="1">
+                       <widget class="QCheckBox" name="disc_9">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="10" column="2">
+                       <widget class="QLabel" name="label_29">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="10" column="3">
+                       <widget class="QLineEdit" name="inReg_9">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="10" column="4">
+                       <widget class="QLineEdit" name="holdReg_9">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="11" column="0">
+                       <widget class="QCheckBox" name="coils_10">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="11" column="1">
+                       <widget class="QCheckBox" name="disc_10">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="11" column="2">
+                       <widget class="QLabel" name="label_30">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="11" column="3">
+                       <widget class="QLineEdit" name="inReg_10">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="11" column="4">
+                       <widget class="QLineEdit" name="holdReg_10">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="12" column="0">
+                       <widget class="QCheckBox" name="coils_11">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="12" column="1">
+                       <widget class="QCheckBox" name="disc_11">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="12" column="2">
+                       <widget class="QLabel" name="label_31">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="12" column="3">
+                       <widget class="QLineEdit" name="inReg_11">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="12" column="4">
+                       <widget class="QLineEdit" name="holdReg_11">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="13" column="0">
+                       <widget class="QCheckBox" name="coils_12">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="13" column="1">
+                       <widget class="QCheckBox" name="disc_12">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="13" column="2">
+                       <widget class="QLabel" name="label_32">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="13" column="3">
+                       <widget class="QLineEdit" name="inReg_12">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="13" column="4">
+                       <widget class="QLineEdit" name="holdReg_12">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="14" column="0">
+                       <widget class="QCheckBox" name="coils_13">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="14" column="1">
+                       <widget class="QCheckBox" name="disc_13">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="14" column="2">
+                       <widget class="QLabel" name="label_33">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="14" column="3">
+                       <widget class="QLineEdit" name="inReg_13">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="14" column="4">
+                       <widget class="QLineEdit" name="holdReg_13">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="15" column="0">
+                       <widget class="QCheckBox" name="coils_14">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="15" column="1">
+                       <widget class="QCheckBox" name="disc_14">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="15" column="2">
+                       <widget class="QLabel" name="label_34">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="15" column="3">
+                       <widget class="QLineEdit" name="inReg_14">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="15" column="4">
+                       <widget class="QLineEdit" name="holdReg_14">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="16" column="0">
+                       <widget class="QCheckBox" name="coils_15">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="16" column="1">
+                       <widget class="QCheckBox" name="disc_15">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="16" column="2">
+                       <widget class="QLabel" name="label_35">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="16" column="3">
+                       <widget class="QLineEdit" name="inReg_15">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="16" column="4">
+                       <widget class="QLineEdit" name="holdReg_15">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="17" column="0">
+                       <widget class="QCheckBox" name="coils_16">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="17" column="1">
+                       <widget class="QCheckBox" name="disc_16">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="17" column="2">
+                       <widget class="QLabel" name="label_36">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="17" column="3">
+                       <widget class="QLineEdit" name="inReg_16">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="17" column="4">
+                       <widget class="QLineEdit" name="holdReg_16">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="18" column="0">
+                       <widget class="QCheckBox" name="coils_17">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="18" column="1">
+                       <widget class="QCheckBox" name="disc_17">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="18" column="2">
+                       <widget class="QLabel" name="label_37">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="18" column="3">
+                       <widget class="QLineEdit" name="inReg_17">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="18" column="4">
+                       <widget class="QLineEdit" name="holdReg_17">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="19" column="0">
+                       <widget class="QCheckBox" name="coils_18">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="19" column="1">
+                       <widget class="QCheckBox" name="disc_18">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="19" column="2">
+                       <widget class="QLabel" name="label_38">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="19" column="3">
+                       <widget class="QLineEdit" name="inReg_18">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="19" column="4">
+                       <widget class="QLineEdit" name="holdReg_18">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="20" column="0">
+                       <widget class="QCheckBox" name="coils_19">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="20" column="1">
+                       <widget class="QCheckBox" name="disc_19">
+                        <property name="text">
+                         <string>1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="20" column="2">
+                       <widget class="QLabel" name="label_39">
+                        <property name="text">
+                         <string>0</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="20" column="3">
+                       <widget class="QLineEdit" name="inReg_19">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="20" column="4">
+                       <widget class="QLineEdit" name="holdReg_19">
+                        <property name="placeholderText">
+                         <string>Hexadecimal A-F, a-f, 0-9.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_17" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <widget class="QWidget" name="widget_18" native="true">
+                     <layout class="QHBoxLayout" name="horizontalLayout_18">
+                      <item>
+                       <widget class="QLabel" name="label_14">
+                        <property name="text">
+                         <string>ClientConnectType:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="cboConnType_2"/>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_40">
+                        <property name="text">
+                         <string>Port:</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="txtServer_2"/>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="spinAddr_2"/>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btnConnect_2">
+                        <property name="text">
+                         <string>Connect</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_19" native="true"/>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_20" native="true"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Sn3DCameraWidget</class>
+   <extends>QWidget</extends>
+   <header>subcontrol/sn3dcamerawidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Sn3DSDKMainViewBase</class>
+   <extends>QWidget</extends>
+   <header>sn3dsdkmainviewbase.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

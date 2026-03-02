@@ -1,0 +1,25 @@
+# Windows 개발 환경 — CRLF 통일
+* text=auto
+
+# C++ 소스코드
+*.cpp  text eol=crlf
+*.h    text eol=crlf
+*.ui   text eol=crlf
+*.qrc  text eol=crlf
+
+# CMake
+CMakeLists.txt  text eol=crlf
+*.cmake         text eol=crlf
+
+# JSON / 설정
+*.json  text eol=crlf
+*.ini   text eol=crlf
+*.xml   text eol=crlf
+
+# 바이너리 파일 — 변환 없음
+*.png   binary
+*.jpg   binary
+*.ico   binary
+*.dll   binary
+*.lib   binary
+*.exe   binary
