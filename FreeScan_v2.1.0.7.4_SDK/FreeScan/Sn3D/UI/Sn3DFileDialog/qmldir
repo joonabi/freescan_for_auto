@@ -1,0 +1,5 @@
+﻿module Sn3D.UI.Sn3DFileDialog
+plugin Sn3DFileDialog
+classname Sn3DFiledialogPlugin
+typeinfo plugin.qmltypes
+

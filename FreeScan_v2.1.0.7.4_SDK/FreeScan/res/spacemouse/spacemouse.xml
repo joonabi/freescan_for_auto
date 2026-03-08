@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="gb2312"?>
+<ROOT>
+    <COMMAND>
+        <ID>SN3D_ID_EDITTARGET</ID>
+        <NAME>Switch Edit Target</NAME>
+        <DESCRIBE>Switch Edit Target</DESCRIBE>
+        <ICON>./pointcloud.png</ICON>
+        <SHORTCUT>Ctrl+M</SHORTCUT>
+    </COMMAND>
+    <COMMAND>
+        <ID>SN3D_ID_SWITCHTHROUGH</ID>
+        <NAME>Through/NoThrough</NAME>
+        <DESCRIBE>Through or NoThrough</DESCRIBE>
+        <ICON>./sm_through.png</ICON>
+        <SHORTCUT>Ctrl+G</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_EDITCHANGE</ID>
+        <NAME>Switch Edit Type</NAME>
+        <DESCRIBE>Switch Edit Type</DESCRIBE>
+        <ICON>./st_lasso.png</ICON>
+        <SHORTCUT>Ctrl+T</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_SELECTALL</ID>
+        <NAME>Select All</NAME>
+        <DESCRIBE>Select all data</DESCRIBE>
+        <ICON>./select_all.png</ICON>
+        <SHORTCUT>Ctrl+A</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_UNSELECT</ID>
+        <NAME>Unselect</NAME>
+        <DESCRIBE>Unselect all data</DESCRIBE>
+        <ICON>./unselect.png</ICON>
+        <SHORTCUT>Ctrl+C</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_CONNECTEDDOMAIN</ID>
+        <NAME>Connected Domain</NAME>
+        <DESCRIBE>Connected Domain</DESCRIBE>
+        <ICON>./cds.png</ICON>
+        <SHORTCUT>Ctrl+R</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_REVERT</ID>
+        <NAME>Revert</NAME>
+        <DESCRIBE>Revert select data</DESCRIBE>
+        <ICON>./revert.png</ICON>
+        <SHORTCUT>Ctrl+I</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_DELETE</ID>
+        <NAME>Delete</NAME>
+        <DESCRIBE>Delete selected data</DESCRIBE>
+        <ICON>./delete.png</ICON>
+        <SHORTCUT>Del</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_UNDO</ID>
+        <NAME>Undo</NAME>
+        <DESCRIBE>undo action</DESCRIBE>
+        <ICON>./undo.png</ICON>
+        <SHORTCUT>Ctrl+Z</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_REDO</ID>
+        <NAME>Redo</NAME>
+        <DESCRIBE>redo action</DESCRIBE>
+        <ICON>./redo.png</ICON>
+        <SHORTCUT>Ctrl+Y</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_CANCEL</ID>
+        <NAME>Cancel Edit</NAME>
+        <DESCRIBE>Cancel the edit</DESCRIBE>
+        <ICON>./cancel_edit.png</ICON>
+        <SHORTCUT>Ctrl+Shift+Z</SHORTCUT>
+    </COMMAND>
+
+    <COMMAND>
+        <ID>SN3D_ID_APPLY</ID>
+        <NAME>Apply Edit</NAME>
+        <DESCRIBE>Apply Edit</DESCRIBE>
+        <ICON>./apply_eidt.png</ICON>
+        <SHORTCUT>Enter</SHORTCUT>
+    </COMMAND>
+
+   
+</ROOT>

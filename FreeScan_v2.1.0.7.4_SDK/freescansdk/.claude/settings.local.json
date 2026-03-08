@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/SDK/2.0.1.2.1sdk and Automation development kit/2.0.1.2.1sdk and Automation development kit/**)",
+      "Bash(file \"C:\\\\SDK\\\\2.0.1.2.1sdk and Automation development kit\\\\2.0.1.2.1sdk and Automation development kit\\\\doc\"/*.docx)",
+      "Bash(python create_sdk201_doc.py)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Read(//c/figma-mcp/**)",
+      "Bash(npm run build:win)",
+      "Read(//c/Users/u9726/.bun/**)",
+      "Read(//c/Users/u9726/AppData/Local/Programs/**)",
+      "Read(//c/Users/u9726/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\SDK\\FreeScan_v2.1.0.7.4_SDK\\FreeScan_v2.1.0.7.4_SDK\\freescansdk\\sn3dsdkdemo\\SDKCPlusDemo\\src",
+      "c:\\3d_scan\\SND_SDK"
+    ]
+  }
+}

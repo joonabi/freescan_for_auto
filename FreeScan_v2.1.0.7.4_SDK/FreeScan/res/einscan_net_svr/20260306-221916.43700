@@ -1,0 +1,5 @@
+Log file created at: 2026/03/06 22:19:16
+Running on machine: LEEWONMAN
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260306 22:19:16.014439 25288 main.cpp:140] start time:2026-03-06_22-19-16

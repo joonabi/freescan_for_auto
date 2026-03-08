@@ -1,0 +1,4 @@
+﻿module Sn3D.Digit.SceneMgr
+plugin pluginsn3d.digit.scenemgr
+classname Sn3DDigitSceneMgrPlugin
+typeinfo plugin.qmltypes

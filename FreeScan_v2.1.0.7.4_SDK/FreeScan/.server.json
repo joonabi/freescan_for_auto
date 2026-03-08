@@ -1,0 +1,123 @@
+{
+    "soft": {
+        "modelCode": "optimscan",
+        "maxPatch": 10,
+        "productLine": "scan",
+        "cdn": {
+            "product": {
+                "cn": "https://cdnimgcn.shining3d.com/software/dentalscan/interface.json",
+                "default": "https://cdnimg.shining3d.com/software/dentalscan/interface.json"
+            },
+            "cloud": {
+                "cn": "https://cdnimgcn.shining3d.com/software/dentalscan/interface.json",
+                "default": "https://cdnimg.shining3d.com/software/dentalscan/interface.json"
+            }
+        },
+        "upgradeMode": "ignore",
+        "version": "0.0.0.0",
+        "autoDownload": false,
+        "checkModels": true,
+        "checkModulars": true,
+        "env": "release"
+    },
+    "savePath": {
+        "fetchRecommend": "tmp/recommend",
+        "update": "../shiningdownload",
+        "order": "tmp/order",
+        "dlp": "tmp/dlp",
+        "calibration": "tmp/calibration",
+        "limit": {
+            "upload": 10,
+            "download": 10,
+            "uploadMinChunkSize": 5,
+            "downloadMinChunkSize": 5
+        }
+    },
+    "log": {
+        "output": "file",
+        "path": "logs",
+        "file": "community.log",
+        "level": "info",
+        "max": 10,
+        "maxAge": 30,
+        "localtime": true
+    },
+    "mqtt": {
+        "host": "127.0.0.1",
+        "port": "1883",
+        "username": "",
+        "password": "",
+        "channel": "dental",
+        "module": "community",
+        "method": {
+            "self": "clientMQTTQTApiPassport",
+            "software": "dentalMQTTApi"
+        }
+    },
+    "uploadWatcher":[
+        {
+            "path":"tmp/specDatas",
+            "aviodRepeat":"stat",
+            "delete":false,
+            "source":"xxx",
+            "others":"",
+            "duration":5
+        }
+    ],
+    "http": {
+        "port": ":8080",
+        "prefix": "/"
+    },
+    "db": {
+        "type": "badger",
+        "badger": {
+            "path": "./datas"
+        }
+    },
+    "trigger": {
+        "now": [
+            "usageTracing",
+            "dotTracing",
+            "calibrateTracing",
+            "settingTracing",
+            "logTracing",
+            "specDataTracing",
+            "formTracing"
+        ],
+        "upgradeDownSubHour": 8
+    },
+    "formats": {
+        "zip": [
+            "zip",
+            "bz2",
+            "gz",
+            "xz",
+            "tar",
+            "rar",
+            "sz",
+            "br"
+        ],
+        "mesh": [
+            "stl",
+            "obj",
+            "3mf",
+            "ply",
+            "beb"
+        ]
+    },
+    "cron": {
+        "enable": true,
+        "updateRemoteJSON": "@every 4h",
+        "geoCountry": "@every 1h",
+        "softDeviceStatus": "@every 5m",
+        "tracing": "@every 1h",
+        "recommendDown": "@every 8h"
+    },
+    "recommend": {
+        "timeout": 10
+    },
+    "protoType":"qttunnel",
+    "mode": "test",
+    "singleName": "community",
+    "version": "1.1.75"
+}

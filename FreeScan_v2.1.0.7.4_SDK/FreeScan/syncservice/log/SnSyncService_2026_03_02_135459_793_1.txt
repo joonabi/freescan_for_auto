@@ -1,0 +1,31 @@
+2026-03-02 13:54:59.962 : 57160 : SnSyncTool : debug : 350 : main : "Active code page: 437\r\nOk.\r\n\r\n"
+2026-03-02 13:54:59.963 : 57160 : SnSyncTool : info : 46 : TunnelMgr::init : tunnel mgr initing...
+2026-03-02 13:54:59.963 : 57160 : SnSyncTool : info : 69 : TunnelMgr::init : init connect hub port:  1883
+2026-03-02 13:54:59.969 : 57160 : SnSyncTool : info : 95 : TunnelMgr::init : "demo" 2147483648
+2026-03-02 13:54:59.969 : 57160 : SnSyncTool : info : 29 : PluginMgr::init : plugin mgr initing...
+2026-03-02 13:54:59.969 : 57160 : SnSyncTool : info : 43 : PluginMgr::init : load  "3DDigitalSyncInterface.2.64"
+2026-03-02 13:54:59.970 : 57160 : SnSyncService : debug : 334 : SnSyncCore::CommandManager::loadSpecifyVersionPlugin : load device plugin  "C:/SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan/syncservice/logic/3DDigitalSyncInterface.2.64.9-alpha.16.dll"
+2026-03-02 13:54:59.974 : 57160 : SnSyncService : info : 164 : DigitalSyncPlugin::init : init controller handle  0x1de8e230ee0
+2026-03-02 13:54:59.974 : 57160 : SnSyncTool : info : 123 : TunnelMgr::connectToHub : start connect to hub
+2026-03-02 13:54:59.996 : 57160 : SnSyncTool : info : 76 : SnSyncServiceApp::initInternal : SnSyncService initial finish
+2026-03-02 13:54:59.996 : 57160 : SnSyncTool : info : 382 : main : log config buf size:  0 , log used size:  15014
+2026-03-02 13:54:59.999 : 57160 : SnSyncTool : info : 161 : TunnelMgr::onModuleConnected : module connected to hub
+2026-03-02 13:54:59.999 : 57160 : SnSyncTool : info : 81 : SnSyncServiceApp::onHubConnectResult : 0
+2026-03-02 13:54:59.999 : 57160 : SnSyncTool : info : 98 : SnSyncServiceApp::initOther : initing other...
+2026-03-02 13:55:12.350 : 50628 : SnSyncTool : info : 79 : PluginMgr::recvExecuteSignal::::operator() : recvExecuteSignal begin, plugin: "3DDigitalSyncInterface"  cmd: "getProperty"  params: (QVariant(std::nullptr_t, (nullptr)), QVariant(QString, "ProductNameQuick"), QVariant(std::nullptr_t, (nullptr)))
+2026-03-02 13:55:12.350 : 50628 : SnSyncService : info : 115 : ExtraFunc::getProperty : get extra func enter. cmd:  "ProductNameQuick" , params:  QVariant(std::nullptr_t, (nullptr))
+2026-03-02 13:55:12.350 : 50628 : SnSyncService : debug : 118 : ExtraFunc::getProperty : ExtraFunc getProperty enter. cmd:  "ProductNameQuick"
+2026-03-02 13:55:12.351 : 50628 : SnSyncService : debug : 156 : SnSyncCore::DeviceManager::loadDevicePlugin : load device plugin  "C:/SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan/syncservice/device/SHNDetect.2.0.0.dll"
+2026-03-02 13:55:12.353 : 50628 : SnSyncService : info : 145 : ExtraFunc::getProperty : enumDevice num:  1
+2026-03-02 13:55:12.353 : 50628 : SnSyncService : info : 146 : ExtraFunc::getProperty : "enum SHNDetect device num: 1."
+2026-03-02 13:55:17.621 : 50628 : SnSyncService : debug : 160 : ExtraFunc::getProperty : ExtraFunc Get DevInfo succeed. value:  ()
+2026-03-02 13:55:17.621 : 50628 : SnSyncService : info : 625 : ExtraFunc::getProperty : get extra func end. ret:  QPair(0,QVariant(QVariantList, ()))
+2026-03-02 13:55:17.624 : 50628 : SnSyncTool : info : 79 : PluginMgr::recvExecuteSignal::::operator() : recvExecuteSignal begin, plugin: "3DDigitalSyncInterface"  cmd: "openDevices"  params: (QVariant(QVariantMap, QMap(("type", QVariant(QString, "")))))
+2026-03-02 13:55:17.624 : 50628 : SnSyncService : critical : 1014 : DigitalSyncPlugin::openDevices : invalid dev type
+2026-03-02 13:55:17.624 : 50628 : SnSyncTool : info : 89 : PluginMgr::recvExecuteSignal::::operator() : end, SnSyncTool::Exception: CommandsParamIllegalError:invalid dev type
+2026-03-02 13:55:33.696 : 50628 : SnSyncTool : info : 79 : PluginMgr::recvExecuteSignal::::operator() : recvExecuteSignal begin, plugin: "3DDigitalSyncInterface"  cmd: "getProperty"  params: (QVariant(std::nullptr_t, (nullptr)), QVariant(QString, "Serial"), QVariant(std::nullptr_t, (nullptr)))
+2026-03-02 13:55:33.696 : 50628 : SnSyncService : critical : 1114 : DigitalSyncPlugin::getProperty : node is invalid
+2026-03-02 13:55:33.696 : 50628 : SnSyncTool : info : 89 : PluginMgr::recvExecuteSignal::::operator() : end, SnSyncTool::Exception: CommandsInvalidHandleError:node is invalid
+2026-03-02 13:59:04.044 : 27524 : SnSyncTool : info : 79 : PluginMgr::recvExecuteSignal::::operator() : recvExecuteSignal begin, plugin: "3DDigitalSyncInterface"  cmd: "setFlagBitInterface"  params: (QVariant(std::nullptr_t, (nullptr)), QVariant(QString, "ImageStream"), QVariant(bool, false))
+2026-03-02 13:59:04.044 : 27524 : SnSyncService : critical : 1152 : DigitalSyncPlugin::setFlagBitInterface : node is invalid
+2026-03-02 13:59:04.044 : 27524 : SnSyncTool : info : 89 : PluginMgr::recvExecuteSignal::::operator() : end, SnSyncTool::Exception: CommandsInvalidHandleError:node is invalid

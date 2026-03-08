@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FreeScanSDK_ZMQ_Documention: FreeScanSDK_ZMQ_Documention</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">FreeScanSDK_ZMQ_Documention<span id="projectnumber">&#160;2.0.1.2.3</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">FreeScanSDK_ZMQ_Documention </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+指南</h1>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Python演示运行环境：</h2>
+<p><em>python 3.6(64-bit)</em></p>
+<p><em>pip 9.0.3</em></p>
+<p><em>setuptools 39.0.1</em></p>
+<p><em>pyzmq 25.1.0</em></p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+自定义python_scan_config.ini</h2>
+<div class="fragment"><div class="line">[General]</div>
+<div class="line">devicetype = combo #设备类型</div>
+<div class="line">slndirpath = D:/desktop/Data #创建新项目组时，选择一个文件夹路径来放置它</div>
+<div class="line">openProjectDir = D:/desktop/Data #打开新项目组时，选择一个文件夹来放置它</div>
+<div class="line">openProjectFile = Data.sln_laser_combo #打开新项目组时，选择一个.sln文件</div>
+<div class="line">scanType =0 #0代表激光扫描模式（目前sdk只支持激光扫描模式）</div>
+<div class="line">service_dir = D:/Sn3DSDK/release_sdk_freescan_v2.0.1_3553_f615ef9c/bin #你的FreeScan.exe（sdk模式）所在的位置</div>
+<div class="line">saveScanFileName= D:/desktop/Data1/saveMyScan #保存扫描文件的位置，选择扫描文件的名称和路径</div>
+<div class="line">globalMarkersFile=D:/desktop/freescansdk2.0.1-python-zmq/globalMarkersTest_Project1.p3 #导入全局标记文件的位置，选择一个全局标记文件</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md3"></a>
+运行演示</h2>
+<h2><a class="anchor" id="autotoc_md4"></a>
+使用zmq连接到FreeScan</h2>
+<p>需要建立两个zmq连接：一个用于向FreeScan发送命令的应答（demo）-请求（FreeScan）连接，另一个用于接收FreeScan消息的请求（demo）-应答（FreeScan）连接。 </p>
+<h4><a class="anchor" id="autotoc_md5"></a>
+初始化上下文</h4>
+<div class="fragment"><div class="line">zmqContext=zmq.Context()</div>
+<div class="line">zmqReqSocket=zmqContext.socket(zmq.REQ)</div>
+<div class="line">zmqRepSocket=zmqContext.socket(zmq.REP)</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md6"></a>
+连接到FreeScan</h4>
+<p><b>注意：当FreeScan工作在sdk模式时，它会一直等待直到zmq连接正确建立</b> </p><div class="fragment"><div class="line">zmqReqSocket.connect(<span class="stringliteral">&quot;tcp://127.0.0.1:&quot;</span>+demo_zmq_req_port)</div>
+<div class="line">zmqRepSocket.bind(<span class="stringliteral">&quot;tcp://127.0.0.1:&quot;</span>+demo_zmq_rep_port)</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+向FreeScan发送命令</h2>
+<div class="fragment"><div class="line"><span class="keyword">def </span>sendMessageToService(envelope,payload):</div>
+<div class="line">    logging.info(<span class="stringliteral">&quot;sendMessageToService envelope:{0} payload:{1}&quot;</span>.format(envelope,payload))</div>
+<div class="line">    zmqReqSocket.send_string(envelope,zmq.SNDMORE)</div>
+<div class="line">    zmqReqSocket.send_string(payload)</div>
+<div class="line">    message=zmqReqSocket.recv_string()</div>
+<div class="line">    <span class="keywordflow">return</span> message</div>
+</div><!-- fragment --><p> <b>注意：详细的解释可以在instructions.py中找到</b> </p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+从FreeScan接收有效载荷</h2>
+<div class="fragment"><div class="line">receiverThreadRunning=<span class="keyword">True</span></div>
+<div class="line"><span class="keyword">def </span>receiverFunc():</div>
+<div class="line">    <span class="keyword">global</span> receiverThreadRunning</div>
+<div class="line">    <span class="keywordflow">while</span> receiverThreadRunning:</div>
+<div class="line">        responseList=[]</div>
+<div class="line">        envelope=zmqRepSocket.recv()</div>
+<div class="line">        payload=<span class="stringliteral">&quot;&quot;</span></div>
+<div class="line">        <span class="keywordflow">while</span> zmqRepSocket.getsockopt(zmq.RCVMORE):</div>
+<div class="line">            payload=zmqRepSocket.recv()</div>
+<div class="line">            responseList.append(payload)</div>
+<div class="line">        zmqRepSocket.send(b<span class="stringliteral">&#39;\x02&#39;</span>)</div>
+<div class="line">        envelopeStr=envelope.decode(<span class="stringliteral">&#39;utf-8&#39;</span>)</div>
+<div class="line">        payloadStr=b<span class="stringliteral">&#39;&#39;</span>.join(responseList).decode(<span class="stringliteral">&#39;utf-8&#39;</span>)</div>
+<div class="line">        logging.info(<span class="stringliteral">&quot;subscriber get response: envelopeStr=&quot;</span>+envelopeStr+<span class="stringliteral">&quot; payloadStr=&quot;</span>+payloadStr)</div>
+<div class="line">        </div>
+<div class="line">        envelopeTokens=envelopeStr.split(<span class="stringliteral">&#39;/&#39;</span>)</div>
+<div class="line">        if(len(envelopeTokens)!=4):<span class="keywordflow">continue</span></div>
+<div class="line">        api_version = envelopeTokens[0]</div>
+<div class="line">        msg_type = envelopeTokens[1]</div>
+<div class="line">        object_name = envelopeTokens[2]</div>
+<div class="line">        topic_name = envelopeTokens[3]</div>
+<div class="line">    <span class="keywordflow">return</span></div>
+<div class="line">receiverThread=Thread(target=receiverFunc,daemon=<span class="keyword">False</span>)</div>
+</div><!-- fragment --><p><b>注意：每次从FreeScan接收到信封-有效载荷时，你必须发送<code>b'\x02'</code>，就像<code>zmqRepSocket.send(b'\x02')</code>一样</b></p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+有效载荷解释</h3>
+<p>在上述代码中的 <code>payloadStr</code> 是一个包含来自FreeScan的消息的JSON，以下是它的详细解释： </p>
+<h4><a class="anchor" id="autotoc_md10"></a>
+FreeScan启动完成</h4>
+<div class="fragment"><div class="line">{    </div>
+<div class="line">    &quot;cmd&quot;: &quot;showMaximized&quot;,</div>
+<div class="line">    &quot;expiredDays&quot;: 10,//忽略</div>
+<div class="line">    &quot;permanent&quot;: false//忽略</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md11"></a>
+设备在线/离线状态</h4>
+<div class="fragment"><div class="line">{    </div>
+<div class="line">    &quot;cmd&quot;: &quot;deviceStatus&quot;,</div>
+<div class="line">    &quot;deviceStatus&quot;: false //false:设备在线 true:设备离线</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md12"></a>
+当前帧RT</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;cmd&quot;: &quot;currentRTcmd&quot;,</div>
+<div class="line">    &quot;rot0&quot;: 0.9998932697307745,//旋转矩阵</div>
+<div class="line">    &quot;rot1&quot;: 0.0005109950566514646,</div>
+<div class="line">    &quot;rot2&quot;: -0.014600959939422009,</div>
+<div class="line">    &quot;rot3&quot;: -0.00042146231094371294,</div>
+<div class="line">    &quot;rot4&quot;: 0.9999810955996901,</div>
+<div class="line">    &quot;rot5&quot;: 0.006134395876036174,</div>
+<div class="line">    &quot;rot6&quot;: 0.014603818562998604,</div>
+<div class="line">    &quot;rot7&quot;: -0.006127587395994724,</div>
+<div class="line">    &quot;rot8&quot;: 0.9998745827132939,</div>
+<div class="line">    &quot;trans0&quot;: -10.64091953867159,//变换向量</div>
+<div class="line">    &quot;trans1&quot;: 23.70755333971141,</div>
+<div class="line">    &quot;trans2&quot;: 68.76225517449166</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md13"></a>
+设备温度</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;cmd&quot;: &quot;updateDeviceData&quot;,</div>
+<div class="line">    &quot;data&quot;: </div>
+<div class="line">        {        </div>
+<div class="line">            &quot;Temperature&quot;: 36.56//设备温度</div>
+<div class="line">        },</div>
+<div class="line">    &quot;name&quot;: &quot;DeviceTemperature&quot;,</div>
+<div class="line">    &quot;type&quot;: null,//忽略</div>
+<div class="line">    &quot;value&quot;: 36.56</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md14"></a>
+新项目组创建完成</h4>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;cmd&quot;:&quot;newProjectFinish&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md15"></a>
+新项目创建完成</h4>
+<div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;cmd&quot;: &quot;addPrj&quot;,</div>
+<div class="line">    &quot;prjInfo&quot;:  </div>
+<div class="line">        {</div>
+<div class="line">            &quot;prjPath&quot;: &quot;Project1.laser_prj_combo&quot;,//项目文件名</div>
+<div class="line">            &quot;rot&quot;: [1,0,0,0,1,0,0,0,1],//忽略</div>
+<div class="line">            &quot;tran&quot;: [0,0,0]//忽略</div>
+<div class="line">        },</div>
+<div class="line">    &quot;scanMode&quot;: null//忽略</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md16"></a>
+创建/加载项目完成后的信息</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;cmd&quot;: &quot;createOrLoadCurProjectFinished&quot;,</div>
+<div class="line">    &quot;ADVANCED_MODE&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;BRIGHTNESS_LEVEL&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;CALIBTIME&quot;: &quot;&quot;,</div>
+<div class="line">    &quot;DEF_OPTIMIAL&quot;: &quot;1&quot;,</div>
+<div class="line">    &quot;DIS&quot;: &quot;3.5&quot;,</div>
+<div class="line">    &quot;FIRMWARE&quot;: &quot;&quot;,</div>
+<div class="line">    &quot;FRAMES&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;GENERATE_CLOUD&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;LASER_GRADE&quot;: &quot;7&quot;,</div>
+<div class="line">    &quot;MARKERS&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;MATERIAL_TYPE&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;NAME&quot;: &quot;Project1&quot;,</div>
+<div class="line">    &quot;NEEDAPPEDIT&quot;: 0,</div>
+<div class="line">    &quot;POINTS&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;PROJECT_TYPE&quot;: &quot;1&quot;,</div>
+<div class="line">    &quot;SCANNER&quot;: &quot;COMBO&quot;,</div>
+<div class="line">    &quot;SERIALCODE&quot;: &quot;&quot;,</div>
+<div class="line">    &quot;SHAPECHANGE_MODE&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;SOFTWARE&quot;: &quot;2.0.1&quot;,</div>
+<div class="line">    &quot;SOPHISTICATED_DIS&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;STRONG_LIGHT_MODE&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;TRIANGLES&quot;: &quot;0&quot;,</div>
+<div class="line">    &quot;deviceNum&quot;: &quot;&quot;,</div>
+<div class="line">    &quot;frameCount&quot;: 0,</div>
+<div class="line">    &quot;isCreate&quot;: true,</div>
+<div class="line">    &quot;isCreateBySln&quot;: true,</div>
+<div class="line">    &quot;isCurrentProj&quot;: true,</div>
+<div class="line">    &quot;isEmptyProj&quot;: true,</div>
+<div class="line">    &quot;isOpenFromSln&quot;: true,</div>
+<div class="line">    &quot;markerCount&quot;: 0,</div>
+<div class="line">    &quot;markerUuid&quot;: &quot;d49faff8-62d0-43b5-a6f6-b70de97382d8&quot;,//忽略</div>
+<div class="line">    &quot;normalCloudUuid&quot;: &quot;b26ffe2d-6fad-4df8-9e9c-38dcc0bf4a0d&quot;,//忽略</div>
+<div class="line">    &quot;parentName&quot;: &quot;Data&quot;,</div>
+<div class="line">    &quot;points&quot;: 0,</div>
+<div class="line">    &quot;prjSuffix&quot;: &quot;.laser_prj_combo&quot;,</div>
+<div class="line">    &quot;projectPath&quot;: &quot;Project1&quot;,</div>
+<div class="line">    &quot;skeletonMarkerCount&quot;: 0,</div>
+<div class="line">    &quot;slnDir&quot;: &quot;D:\\desktop\\Data&quot;,//该项目组的文件夹</div>
+<div class="line">    &quot;sophisticatedCloudUuid&quot;: &quot;dfa9b438-61e8-4386-a680-6745f7c25bcd&quot;,//忽略</div>
+<div class="line">    &quot;target&quot;: &quot;ProjectListUI&quot;,//忽略</div>
+<div class="line">    &quot;uuid&quot;: &quot;0b23892d-f58c-4af4-a87c-133595454ab3&quot;//忽略</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md17"></a>
+显示进度信息</h4>
+<div class="fragment"><div class="line">{    </div>
+<div class="line">    &quot;cmd&quot;: &quot;showProgress&quot;,</div>
+<div class="line">    &quot;data&quot;: </div>
+<div class="line">        {        </div>
+<div class="line">            &quot;info&quot;: 7,</div>
+<div class="line">            &quot;title&quot;: &quot;Project Loading&quot;,//进度标题</div>
+<div class="line">            &quot;titleAddtitionStr&quot;: &quot;&quot;,</div>
+<div class="line">            &quot;type&quot;: 0,//忽略</div>
+<div class="line">            &quot;value&quot;: 0,//进度值</div>
+<div class="line">            &quot;visible&quot;: true//进度可见性</div>
+<div class="line">        }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md18"></a>
+隐藏进度信息</h4>
+<div class="fragment"><div class="line">{    </div>
+<div class="line">    &quot;cmd&quot;: &quot;hideProgress&quot;,</div>
+<div class="line">    &quot;data&quot;: </div>
+<div class="line">        {        </div>
+<div class="line">            &quot;info&quot;: -1,</div>
+<div class="line">            &quot;title&quot;: &quot;&quot;,//进度标题</div>
+<div class="line">            &quot;titleAddtitionStr&quot;: &quot;&quot;,</div>
+<div class="line">            &quot;type&quot;: -1,//忽略</div>
+<div class="line">            &quot;value&quot;: 0,//进度值</div>
+<div class="line">            &quot;visible&quot;: false//进度可见性</div>
+<div class="line">        }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md19"></a>
+暂停扫描完成</h4>
+<div class="fragment"><div class="line">{    </div>
+<div class="line">    &quot;cmd&quot;: &quot;updateStateWhenStopFusion&quot;,</div>
+<div class="line">    &quot;val&quot;: &quot;pause&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md20"></a>
+保存扫描完成</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;cmd&quot;: &quot;saveScanDataReturn&quot;,</div>
+<div class="line">    &quot;successfulUuids&quot;: [&quot;a8e6e497-2cd5-43e3-9735-15f1f1d340b2&quot;]//忽略</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md21"></a>
+应用后处理完成</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;code&quot;: 0,</div>
+<div class="line">    &quot;method&quot;: &quot;meshResult&quot;,</div>
+<div class="line">    &quot;success&quot;: true//true:应用成功，false:应用失败</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md22"></a>
+保存后处理完成</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;code&quot;: 0,</div>
+<div class="line">    &quot;finish&quot;: true,//true:保存成功，false:保存失败</div>
+<div class="line">    &quot;method&quot;: &quot;saveMeshFinished&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md23"></a>
+从后处理返回扫描完成</h4>
+<div class="fragment"><div class="line">{    </div>
+<div class="line">    &quot;cmd&quot;: &quot;sdkScanPageSwitched&quot;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md24"></a>
+清除/取消扫描完成</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;cmd&quot;: &quot;cancelScanFinish&quot;,</div>
+<div class="line">    &quot;deleteClipPlane&quot;: false//忽略</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h4><a class="anchor" id="autotoc_md25"></a>
+更新扫描信息</h4>
+<div class="fragment"><div class="line">{   </div>
+<div class="line">    &quot;centerX&quot;: 0,</div>
+<div class="line">    &quot;centerY&quot;: -47.397151947021484,</div>
+<div class="line">    &quot;centerZ&quot;: 296.232177734375,</div>
+<div class="line">    &quot;cloudValidFacesNum&quot;: 1,</div>
+<div class="line">    &quot;cloudValidNum&quot;: 3,</div>
+<div class="line">    &quot;cmd&quot;: &quot;updateScanningInfo&quot;,</div>
+<div class="line">    &quot;codingPointNum&quot;: 0,</div>
+<div class="line">    &quot;containCameraPos&quot;: true,</div>
+<div class="line">    &quot;curFrameDis&quot;: 202,</div>
+<div class="line">    &quot;disStep&quot;: 5,</div>
+<div class="line">    &quot;eyeX&quot;: 0,</div>
+<div class="line">    &quot;eyeY&quot;: 78.99524688720703,</div>
+<div class="line">    &quot;eyeZ&quot;: -493.7203063964844,</div>
+<div class="line">    &quot;frameCount&quot;: 0,//当前帧数</div>
+<div class="line">    &quot;frameRate&quot;: 0,//当前帧率</div>
+<div class="line">    &quot;hasOneCompleteScale&quot;: false,</div>
+<div class="line">    &quot;markerRecognize&quot;: true,</div>
+<div class="line">    &quot;serviceTimeStamp&quot;: 411336975,</div>
+<div class="line">    &quot;trackLost&quot;: false,//true:当前跟踪成功，false:当前跟踪丢失</div>
+<div class="line">    &quot;upX&quot;: 0,</div>
+<div class="line">    &quot;upY&quot;: -1,</div>
+<div class="line">    &quot;upZ&quot;: 0,</div>
+<div class="line">    &quot;wholeMarkerNum&quot;: 0</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> 在这个JSON对象中，<code>centerX</code>, <code>centerY</code>, 和 <code>centerZ</code> 定义了扫描中心的三维坐标，<code>upX</code>, <code>upY</code>, 和 <code>upZ</code> 定义了扫描器的朝向（up vector），而 <code>eyeX</code>, <code>eyeY</code>, 和 <code>eyeZ</code> 定义了扫描器的观察点（eye vector）。这些信息通常用于三维场景中的透视信息，特别是当视场角未激活时，它们可以近似表示扫描器的当前位置和方向。</p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

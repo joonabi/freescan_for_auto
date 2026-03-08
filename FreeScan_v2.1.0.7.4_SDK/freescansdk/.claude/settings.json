@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/SDK/FreeScan_v2.1.0.7.4_SDK/**)",
+      "Read(//c/Shining3d/FreeScan/**)",
+      "Read(//c/SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan_v2.1.0.7.4_SDK/freescansdk/**)",
+      "Bash(for f in Sn3DSDKCore.dll Sn3DSDKPlugin.dll SDKCWrapper.dll Sn3DSDKConfig.dll Sn3DSDKDataLib.dll)",
+      "Bash(do echo \"=== $f ===\" ls -la \"c:/Shining3d/FreeScan/$f\")",
+      "Bash(cmake --build build --config Release --target Sn3DSDKDemo)"
+    ],
+    "additionalDirectories": [
+      "c:\\SDK\\FreeScan_v2.1.0.7.4_SDK\\FreeScan_v2.1.0.7.4_SDK\\FreeScan",
+      "c:\\Shining3d\\FreeScan"
+    ]
+  }
+}

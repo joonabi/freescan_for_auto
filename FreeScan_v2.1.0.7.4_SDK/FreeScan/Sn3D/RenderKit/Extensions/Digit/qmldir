@@ -1,0 +1,4 @@
+﻿module Sn3D.RenderKit.Extensions.Digit
+plugin pluginrenderkit.extensions.digit
+classname RenderKitExtDigitPlugin
+typeinfo plugin.qmltypes

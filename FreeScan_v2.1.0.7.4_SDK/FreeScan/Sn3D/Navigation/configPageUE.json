@@ -1,0 +1,117 @@
+    {
+        "__value_explain": "此格式表示注释，具体使用时请删除",
+        "navgate": [
+			{
+                "pageName": "device",
+                "name":"Device",
+                "info": "",
+                "infoTipImg": "qrc:/images/am2online.svg",
+                "infoTip": "",
+				"midMsg": true, 
+				"infoTipTextVisible": false, 
+                "infoTipVisible": false,
+				"havExtraPage": false,
+				"showExPage": false,
+                "navgateEnable":false,
+                "pageSourceUrl":"",
+				"extraPageUrl": "",
+                "itemSourceUrl":"ReconnectButton",
+                "itemVisible": false
+            },
+            {
+                "pageName": "calibPage",
+                "name":"Calibration",
+                "info": "",
+                "infoTipImg": "qrc:/images/caliOk.svg",
+                "infoTip": "检测到设备长时间未标定，为了更好的扫描体验，建议标定后再执行扫描作业",
+				"midMsg": true, 
+                "infoTipTextVisible": false, 
+                "infoTipVisible": false,
+                "navgateEnable":true,
+				"havExtraPage": false,
+				"showExPage": false,
+                "pageSourceUrl":"qrc:/UECalibration.qml",
+				"extraPageUrl": "",
+                "itemSourceUrl":"ReconnectButton",
+                "itemVisible": false
+            },
+            {
+                "pageName": "ScanPage",
+                "name":"Scan",
+                "info": "",
+                "infoTipImg": "",
+                "infoTip": "",
+				"midMsg": true, 
+				"infoTipTextVisible": false, 
+                "infoTipVisible": false,
+                "navgateEnable":true,
+				"havExtraPage": false,
+				"showExPage": false,
+                "pageSourceUrl":"qrc:/LaserScanPage.qml",
+				"extraPageUrl": "",
+                "itemSourceUrl":"",
+                "itemVisible": false
+            },
+            {
+                "pageName": "postprocess",
+                "name":"Post Processing",
+                "info": "",
+                "infoTipImg": "",
+                "infoTip": "",
+				"midMsg": true, 
+				"infoTipTextVisible": false, 
+                "infoTipVisible": false,
+				"havExtraPage": false,
+				"showExPage": false,
+                "navgateEnable":true,
+                "pageSourceUrl":"qrc:/ui/UEPostProcess.qml",
+				"extraPageUrl": "",
+                "itemSourceUrl":"",
+                "itemVisible": false
+            },
+            {
+                "pageName": "measure",
+                "name":"Measurement",
+                "info": "",
+                "infoTipImg": "",
+                "infoTip": "",
+				"midMsg": true, 
+				"infoTipTextVisible": false, 
+                "infoTipVisible": false,
+				"havExtraPage": false,
+				"showExPage": false,
+                "navgateEnable":true,
+                "pageSourceUrl":"qrc:/ui/UEMeasurPage.qml",
+				"extraPageUrl": "",
+                "itemSourceUrl":"",
+                "itemVisible": false
+            }
+        ],
+        "productline": "freescan",
+		"settings":[
+		    {
+				"groupName":"通用设置",
+                        "subModel":["ChooseLangageBox","ScanPreview","DetectingShapeChanges","ScanSophisticated", "FarScanningChanges", "ScannerBeep","SceneMouseSet","ScanTemplateItem"]
+		    },
+			{
+				"groupName":"激光扫描设置",
+		    	"subModel":["ScanDisViewType","LaserAutoClose"]
+			},
+			{
+          "groupName": "三方软件设置",
+          "subModel": [ "CheckClass", "DesignClass" ]
+        },
+			{
+				"groupName":"",
+		    	"subModel":["RenewFactorySet"]
+			}
+		],
+        "cam_driver": "sh3du3driver.inf",
+		"cam_cmd": "pnputil.exe /enum-drivers",
+        "cam_driver_install_bat": "/Resource/driver/UEC/Install.bat",
+        "usb":{
+            "vid": "0x3267",
+            "pid": "0x0002",
+            "protocol": "4"
+        }
+    }

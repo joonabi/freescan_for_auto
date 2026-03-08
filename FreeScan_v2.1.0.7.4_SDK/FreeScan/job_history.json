@@ -1,0 +1,56 @@
+[
+    {
+        "note": "[시뮬]",
+        "path": "C:/SDK/PreSET_STORE/1작업장_20260306_22_10_35",
+        "points": 135416,
+        "preset": "기본 프리셋",
+        "success": true,
+        "time": "2026-03-06 22:11",
+        "workspace": "1작업장"
+    },
+    {
+        "note": "[시뮬]",
+        "path": "C:/SDK/PreSET_STORE/1작업장_20260306_22_11_16",
+        "points": 134165,
+        "preset": "기본 프리셋",
+        "success": true,
+        "time": "2026-03-06 22:11",
+        "workspace": "1작업장"
+    },
+    {
+        "note": "[시뮬]",
+        "path": "C:/SDK/PreSET_STORE/1작업장_20260306_22_13_45",
+        "points": 135416,
+        "preset": "기본 프리셋",
+        "success": true,
+        "time": "2026-03-06 22:14",
+        "workspace": "1작업장"
+    },
+    {
+        "note": "[시뮬]",
+        "path": "C:/SDK/PreSET_STORE/공사1구역_20260306_22_19_12",
+        "points": 135416,
+        "preset": "기본 프리셋",
+        "success": true,
+        "time": "2026-03-06 22:19",
+        "workspace": "공사1구역"
+    },
+    {
+        "note": "[시뮬]",
+        "path": "C:/SDK/PreSET_STORE/공사1구역_20260306_22_19_38",
+        "points": 134165,
+        "preset": "기본 프리셋",
+        "success": true,
+        "time": "2026-03-06 22:19",
+        "workspace": "공사1구역"
+    },
+    {
+        "note": "[시뮬]",
+        "path": "C:/SDK/PreSET_STORE/공사1구역_20260306_22_35_08",
+        "points": 135416,
+        "preset": "기본 프리셋",
+        "success": true,
+        "time": "2026-03-06 22:35",
+        "workspace": "공사1구역"
+    }
+]

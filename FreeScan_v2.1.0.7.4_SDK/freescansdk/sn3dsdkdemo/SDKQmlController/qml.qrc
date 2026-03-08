@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- 메인 -->
+        <file>qml/main.qml</file>
+
+        <!-- 스타일 -->
+        <file>qml/styles/Colors.qml</file>
+        <file>qml/styles/qmldir</file>
+
+        <!-- 공통 컴포넌트 -->
+        <file>qml/components/qmldir</file>
+        <file>qml/components/Sidebar.qml</file>
+        <file>qml/components/Header.qml</file>
+        <file>qml/components/ToggleSwitch.qml</file>
+        <file>qml/components/RadioButton.qml</file>
+        <file>qml/components/Checkbox.qml</file>
+
+        <!-- 페이지 -->
+        <file>qml/pages/WorkplaceManagement.qml</file>
+        <file>qml/pages/PreparationStep.qml</file>
+        <file>qml/pages/ScanStartStep.qml</file>
+        <file>qml/pages/SettingsStep.qml</file>
+        <file>qml/pages/LogViewer.qml</file>
+        <file>qml/pages/ManualStep.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,40 @@
+{
+    "cloud":{
+        "urls":{
+
+        },
+        "eventTracking":{
+			"body":{
+                "idsite":"2",
+				"rec":"1"
+            },
+            "headers":{
+                "X-Auth-AppID":"DOTAPI_ed119019-e5de-51b5-b8d4-11eb15ebad2e"
+            }
+        }
+
+    },
+	"mqtt":{
+        "autoReconnect":true,
+        "autoReconnectInterval":3000,
+        "keepAlive":3000,
+        "isCleanSession":true
+    },
+    "startUpload":{
+         "chunkSize": 10
+     },
+    "startDownload":{
+        "chunkSize": 10
+       
+     },
+	 
+    "autoUpgrade":{
+        "checkInterval":5
+     },
+	 "software":{
+		 "modelCode":"quickcloud",
+		 "version":"1.0.0.0"
+	 },
+	
+    "cloudEnvironment":"test"
+}

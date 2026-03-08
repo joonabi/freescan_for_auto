@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calibration>
+	<!-- 标定类型 -->
+	<type>11</type>
+	<!-- 是否存图 -->
+	<saveCalibImages>1</saveCalibImages>
+	<!-- 是否读图 -->
+	<readImages>0</readImages>
+	<!-- 存图路径 -->
+	<savePath>./res/FreeScanUE</savePath>
+	<!-- 位姿计算算法接口 每个设备及标定板不一样需要配置 -->
+	<poseAlgMethod>trackMarker</poseAlgMethod>
+	<!-- 相机内外参计算 -->
+	<cameraInExAlgMethod>runSn3DUEExtrinsicCalibration</cameraInExAlgMethod>
+	<!-- 光平面标定计算 -->
+	<laserAlgMthod>runLaserRebuildTy</laserAlgMthod>
+	<!-- 数据保存 -->
+	<saveCalibData>true</saveCalibData>
+	<!-- 写设备区间 -->
+	<writeAreas>1</writeAreas>
+	<commands>
+		<command0 type="init">
+			<!-- 设备指令相关 -->
+			<DevCommand>
+				<!-- 开关流 -->
+				<stream>true</stream>
+				<!-- 触发周期 ms -->
+				<triggerPeriod>20</triggerPeriod>
+				<gainExp>
+					<GE1 gain="200" exp="1000" />
+					<GE2 gain="200" exp="1000" />
+				</gainExp>
+				<led>0</led>
+				<!-- 激光配置 -->
+				<laser>
+					<!-- 激光线亮度 -->
+					<LAS1 cross="true" grade="7" luminance="95" />
+					<LAS2 cross="false" grade="1" luminance="50" />
+					<!-- 激光线投射模式 -->
+					<laserNum>0</laserNum>
+				</laser>
+			</DevCommand>
+			<!-- 界面指令 -->
+			<UICommand>
+				<!-- 当前标定第几组 -->
+				<setGroupIndex param="0" />
+				<!-- 大圆中心偏移 -->
+				<setOffset offset="0" />
+			</UICommand>
+			<!-- 算法指令 -->
+			<AlgCommand>
+			</AlgCommand>
+		</command0>
+		<command1 type="finish">
+			<!-- 设备指令相关 -->
+			<DevCommand>
+				<!-- 开关流 -->
+				<stream>false</stream>
+				<laser>
+					<laserNum>0</laserNum>
+				</laser>
+				<led>0</led>
+			</DevCommand>
+			<!-- 界面指令 -->
+			<UICommand>
+			</UICommand>
+			<!-- 算法指令 -->
+			<AlgCommand>
+			</AlgCommand>
+		</command1>
+	</commands>
+	<positionInfo>
+		<!-- 设备旋转角度 -->
+		<angle x="0" y="0" z="180" thresX="10" thresY="10" thresZ="10" />
+		<!-- 设备中心投射到标定板位置 -->
+		<pt x="0" y="0" z="0" thresDim="40" thresHeight="10" offsetX="0" offsetY="0" />
+	</positionInfo>
+	<!-- 图片类型/命名相关 -->
+	<captureInfo>
+		<frames count="1">
+			<!-- type: 0相机 3左倾 4右倾 5平行线 -->
+			<frame0 type="0">
+				<pictures>
+					<!-- X_X_X_X_groupIndex_stepIndex -->
+					<picture0 name="Left_Camera_%1_%2" />
+					<picture1 name="Right_Camera_%1_%2" />
+				</pictures>
+			</frame0>
+		</frames>
+	</captureInfo>
+	<groups count="5">
+		<!-- 平行线 -->
+		<group0 name="" count="9" distanceMid="320" distanceMax="670">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>300</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>71</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="0" />
+					</UICommand>
+				</command0>
+			</commands>
+			<captureInfo>
+				<frames count="4">
+					<frame0 type="3" grade="11">
+						<pictures>
+							<!-- X_X_X_X_groupIndex_stepIndex -->
+							<picture0 name="Left_Laser11_Cross_UpSide_%1_%2" />
+							<picture1 name="Right_Laser11_Cross_UpSide_%1_%2" />
+						</pictures>
+					</frame0>
+					<frame1 type="4" grade="11">
+						<pictures>
+							<picture0 name="Left_Laser11_Cross_DownSide_%1_%2" />
+							<picture1 name="Right_Laser11_Cross_DownSide_%1_%2" />
+						</pictures>
+					</frame1>
+					<frame2 type="5" grade="1">
+						<pictures>
+							<picture0 name="Left_LaserSingle_Parallel_%1_%2" />
+							<picture1 name="Right_LaserSingle_Parallel_%1_%2" />
+						</pictures>
+					</frame2>
+					<frame3 type="0">
+						<pictures>
+							<picture0 name="Left_Camera_%1_%2" />
+							<picture1 name="Right_Camera_%1_%2" />
+						</pictures>
+					</frame3>
+				</frames>
+			</captureInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+			</steps>
+		</group0>
+		<!-- 前倾 -->
+		<group1 name="" count="9" distanceMid="320" distanceMax="670">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>300</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>0</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="1" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+			</steps>
+		</group1>
+		<!-- 后倾 -->
+		<group2 name="" count="9" distanceMid="320" distanceMax="670">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>300</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>0</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="2" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+			</steps>
+		</group2>		
+		<!-- 左倾 -->
+		<group3 name="" count="9" distanceMid="320" distanceMax="670">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>300</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>0</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="3" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+			</steps>
+		</group3>
+		<!-- 右倾 -->
+		<group4 name="" count="9" distanceMid="320" distanceMax="670">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>300</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>0</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="4" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+			</steps>
+		</group4>
+		<!-- 指令相关 -->
+	</groups>
+</calibration>

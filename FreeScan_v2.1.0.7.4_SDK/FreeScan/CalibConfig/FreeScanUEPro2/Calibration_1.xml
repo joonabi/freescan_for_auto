@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calibration>
+	<!-- 标定类型 -->
+	<type>1</type>
+	<!-- 是否存图 -->
+	<saveCalibImages>0</saveCalibImages>
+	<!-- 是否读图 -->
+	<readImages>0</readImages>
+	<!-- 存图路径 -->
+	<savePath>./res/FreeScanUEPro2</savePath>
+	<!-- 位姿计算算法接口 每个设备及标定板不一样需要配置 -->
+	<poseAlgMethod>runSn3DComputeFSRtPNP</poseAlgMethod>
+	<!-- 相机内外参计算 -->
+	<cameraInExAlgMethod>runSn3DFS4DoubleCameraCalibration</cameraInExAlgMethod>
+	<!-- 降采样计算 -->
+	<downSampleCalc>true</downSampleCalc>
+	<!-- 切换标定模式-->
+	<changeCalibType>2</changeCalibType> 
+	<!-- 数据保存 -->
+	<saveCalibData>true</saveCalibData>
+	<!-- 写设备区间 -->
+	<writeAreas>6</writeAreas> 
+	<commands>
+		<command0 type="init">
+			<!-- 设备指令相关 -->
+			<DevCommand>
+				<!-- 开关流 -->
+				<stream>true</stream>
+				<!--<downSampling>false</downSampling> -->
+				<!-- 触发周期 ms -->
+				<triggerPeriod>20</triggerPeriod>
+				<gainExp>
+					<GE1 gain="180" exp="1800" />
+					<GE2 gain="180" exp="1800" />
+				</gainExp>
+				<ExtractPointArea>2</ExtractPointArea>
+				<ExtractPointSize>300</ExtractPointSize>
+				<led>0</led>
+				<!-- 激光配置 -->
+				<laser>
+					<!-- 激光线投射模式 -->
+					<laserNum>0</laserNum>
+				</laser>
+				<project></project>
+				<turnTable></turnTable>
+			</DevCommand>
+			<!-- 界面指令 -->
+			<UICommand>
+				<!-- 当前标定第几组 -->
+				<setGroupIndex param="0" />
+				<!-- 大圆中心偏移 -->
+				<setOffset offset="0" />
+				<!-- 标定板旋转 -->
+				<rotation angle="0" />
+			</UICommand>
+			<!-- 算法指令 -->
+			<AlgCommand>
+			</AlgCommand>
+		</command0>
+		<command1 type="finish">
+			<!-- 设备指令相关 -->
+			<DevCommand>
+				<!-- 开关流 -->
+				<stream>false</stream>
+				<led>0</led>
+			</DevCommand>
+			<!-- 界面指令 -->
+			<UICommand>
+			</UICommand>
+			<!-- 算法指令 -->
+			<AlgCommand>
+			</AlgCommand>
+		</command1>
+	</commands>
+	<positionInfo>
+		<!-- 设备旋转角度 -->
+		<angle x="0" y="0" z="180" thresX="10" thresY="10" thresZ="10" />
+		<!-- 设备中心投射到标定板位置 -->
+		<pt x="0" y="0" z="0" thresDim="40" thresHeight="10" offset="0" />
+	</positionInfo>
+	<!-- 图片类型/命名相关 -->
+	<captureInfo>
+		<cameras count="2">
+			<camera0>
+				<!-- 是否旋转 
+				<rotation transpose="0" flip="1" width="1280" height="1024" />-->
+				<!-- 是否裁剪 -->
+				<clip type="1" x="0" y="0" width="768" height="1024" />
+				<!-- ROI裁剪 -->
+				<!-- 
+				<clipInfo type="ROI">	
+					<clipParam x="0" y="0" width="0" height="0"/>
+				</clipInfo> 
+				-->
+				<!-- 格式转换信息 -->
+				<formatInfo></formatInfo>
+			</camera0>
+			<camera1>
+				<!-- 是否旋转 
+				<rotation transpose="0" flip="1" width="1280" height="1024" />-->
+				<!-- 是否裁剪 -->
+				<clip type="1" x="0" y="0" width="768" height="1024" />
+				<!-- ROI裁剪 -->
+				<!-- 
+				<clipInfo type="ROI" x="0" y="0" width="0" height="0" />
+				-->
+				<!-- 格式转换信息 -->
+				<formatInfo></formatInfo>
+			</camera1>
+		</cameras>
+		<frames count="1">
+			<!-- type: 0相机 3左倾 4右倾 5平行线 -->
+			<frame0 type="0">
+				<pictures>
+					<!-- X_X_X_X_groupIndex_stepIndex -->
+					<picture0 name="Left_CameraImage_%1_%2" />
+					<picture1 name="Right_CameraImage_%1_%2" />
+					<picture2 name="Left_Camera_%1_%2" />
+					<picture3 name="Right_Camera_%1_%2" />
+				</pictures>
+			</frame0>
+		</frames>
+	</captureInfo>
+	<groups count="20">
+		<!-- 0° 垂直 -->
+		<group0 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 大圆中心偏移 -->
+						<setOffset offset="0" />
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="0" />
+					</UICommand>
+					<!-- 算法指令 -->
+					<AlgCommand>
+					</AlgCommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle />
+				<!-- 设备中心投射到标定板位置 -->
+				<pt />
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group0>
+		<!-- 0° 前倾 -->
+		<group1 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="1" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group1>
+		<!-- 0° 后倾 -->
+		<group2 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="2" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group2>		
+		<!-- 0° 左倾 -->
+		<group3 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="3" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group3>
+		<!-- 0° 右倾 -->
+		<group4 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="4" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group4>
+		
+		<!-- 90° 垂直 -->
+		<group5 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="5" />
+						<!-- 标定板旋转 -->
+						<rotation angle="90" />
+					</UICommand>
+					<!-- 算法指令 -->
+					<AlgCommand>
+					</AlgCommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle />
+				<!-- 设备中心投射到标定板位置 -->
+				<pt />
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group5>
+		<!-- 90° 前倾 -->
+		<group6 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="6" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group6>
+		<!-- 90° 后倾 -->
+		<group7 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="7" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group7>		
+		<!-- 90° 左倾 -->
+		<group8 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="8" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group8>
+		<!-- 90° 右倾 -->
+		<group9 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="9" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group9>
+
+		<!-- 180° 垂直 -->
+		<group10 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="10" />
+						<!-- 标定板旋转 -->
+						<rotation angle="180" />
+					</UICommand>
+					<!-- 算法指令 -->
+					<AlgCommand>
+					</AlgCommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle />
+				<!-- 设备中心投射到标定板位置 -->
+				<pt />
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group10>
+		<!-- 180° 前倾 -->
+		<group11 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="11" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group11>
+		<!-- 180° 后倾 -->
+		<group12 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="12" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group12>		
+		<!-- 180° 左倾 -->
+		<group13 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="13" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group13>
+		<!-- 180° 右倾 -->
+		<group14 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="14" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group14>
+
+		<!-- 270° 垂直 -->
+		<group15 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="15" />
+						<!-- 标定板旋转 -->
+						<rotation angle="270" />
+					</UICommand>
+					<!-- 算法指令 -->
+					<AlgCommand>
+					</AlgCommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle />
+				<!-- 设备中心投射到标定板位置 -->
+				<pt />
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group15>
+		<!-- 270° 前倾 -->
+		<group16 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="16" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group16>
+		<!-- 270° 后倾 -->
+		<group17 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="17" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle y="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group17>		
+		<!-- 270° 左倾 -->
+		<group18 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="18" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="-20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group18>
+		<!-- 270° 右倾 -->
+		<group19 name="" count="9" distanceMid="300" distanceMax="550">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<!-- 开补光灯 -->
+						<led>800</led>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="19" />
+					</UICommand>
+				</command0>
+			</commands>
+			<positionInfo>
+				<!-- 设备旋转角度 -->
+				<angle x="20"/>
+			</positionInfo>
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+			</steps>
+		</group19>
+	</groups>
+</calibration>

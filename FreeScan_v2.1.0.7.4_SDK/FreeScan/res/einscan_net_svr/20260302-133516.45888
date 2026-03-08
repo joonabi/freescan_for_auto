@@ -1,0 +1,27 @@
+Log file created at: 2026/03/02 13:35:16
+Running on machine: LEEWONMAN
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260302 13:35:16.529438 68464 main.cpp:140] start time:2026-03-02_13-35-16
+I20260302 13:35:16.529438 68464 main.cpp:143] pross argc=15
+I20260302 13:35:16.529438 68464 main.cpp:155] monitor_thr started1
+I20260302 13:35:16.533934 68464 sketchfabmdl.cpp:76] sketchfab_init
+I20260302 13:35:16.533934 68464 informationmdl.cpp:69] upload files :0
+I20260302 13:35:16.534945 68464 informationmdl.cpp:83] app_name=information_uploader
+I20260302 13:35:16.534945 68464 logiclayer.cpp:51] loginc started staticsize=0 priority 0
+I20260302 13:35:16.534945 34052 informationmdl.cpp:129] information_init
+I20260302 13:35:16.535934 34052 windows_information_imp.cpp:1692] get_upload_config show test_type 0_test_url 
+I20260302 13:35:16.535934 34052 informationmdl.cpp:150] upload score files  count0upload_enable=0app_name=information_uploader
+I20260302 13:36:16.538962 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:37:16.539070 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:38:16.559370 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:39:16.554082 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:40:16.556900 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:41:16.559831 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:42:16.562776 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:43:16.570415 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:44:16.568974 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:45:16.562775 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:46:16.577708 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:47:16.578294 34052 informationmdl.cpp:443] cmd= 17
+I20260302 13:48:16.575640 34052 informationmdl.cpp:443] cmd= 17

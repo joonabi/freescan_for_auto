@@ -1,0 +1,3 @@
+module Sn3D.Digit.Ui
+plugin Sn3DDigitUi
+typeinfo plugin.qmltypes

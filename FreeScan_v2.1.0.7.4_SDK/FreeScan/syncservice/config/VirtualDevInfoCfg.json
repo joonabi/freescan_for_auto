@@ -1,0 +1,35 @@
+{
+    "TrackrS7Probe_Virtualizer": {
+        "getProperty": {
+			"CameraResolution":
+			{
+				"S7":[1280,1024],
+				"Track":[1280,1024]
+			},
+			"SubDevList":["Tracker","S7"],
+			"FirmwareVersionEx":{
+				"S7":{
+				"MCUFW":"V 1.1.6_230511\u0000\u0000",
+				"SYNFW":"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+				},
+				"Track":{
+				"track":{
+					"DEVSN":"48b02d21b01c",
+					"DEVTYPE":"3",
+					"HARDWARE":"v1.0.0",
+					"LASERVER":"v2.4.4.1",
+					"MARKERVER":"TargetDtc_V7.0.0.3",
+					"MCU":"FST_01_XXX_CH_SF401_V2.0.4",
+					"SOFTWARE":"v2.2.5_build_2023-08-07_15:58:20",
+					"TX2":"FST_01_XXX_CH_TX2d02_V2.2.5_IAP"
+				}
+			}
+			},
+			"Serial":
+			{
+				"S7":"EBA23040065",
+				"Track":"cam0:NR0230020001,cam1:NR0230020002"
+			}
+		}
+    }
+}

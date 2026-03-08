@@ -1,0 +1,144 @@
+{
+    "condsDict": {
+        "1": [
+            "single",
+            "one"
+        ],
+        "11": [
+            "eleven"
+        ],
+        "13": [
+            "thirteen",
+            "26"
+        ],
+        "25": [
+            "twentyfive",
+            "50"
+        ],
+        "49": [
+            "fortynine",
+            "98"
+        ],
+        "7": [
+            "seven"
+        ],
+        "Combo": [
+        ],
+        "S7": [
+            "TE17"
+        ],
+        "TE25": [
+        ],
+        "TrioHK": [
+            "Trio_HK",
+            "HK",
+            "海康"
+        ],
+        "Trio灰点": [
+            "TrioPG",
+            "Trio_PG",
+            "PG",
+            "灰点"
+        ],
+        "UE": [
+        ],
+        "UEP": [
+        ],
+        "反光": [
+            "reflect"
+        ],
+        "扫描挡位值": [
+            "cam_para"
+        ],
+        "普通": [
+            "normal"
+        ],
+        "标志点算法参数": [
+            "alg",
+            "marker"
+        ],
+        "框架点": [
+            "frame",
+            "marker"
+        ],
+        "激光扫描": [
+            "laser"
+        ],
+        "点云": [
+            "cloud"
+        ],
+        "红外": [
+            "ir",
+            "Infrared"
+        ],
+        "网格": [
+            "mesh"
+        ],
+        "跟踪扫描": [
+            "track",
+            "trak"
+        ]
+    },
+    "condtionDataList": [
+        {
+            "conditions": [
+                "...",
+                "UE",
+                "UEP",
+                "Combo",
+                "S7",
+                "TE25",
+                "TrioHK",
+                "Trio灰点"
+            ],
+            "name": "Device"
+        },
+        {
+            "conditions": [
+                "...",
+                "红外",
+                "激光扫描",
+                "跟踪扫描"
+            ],
+            "name": "ScanMode"
+        },
+        {
+            "conditions": [
+                "...",
+                "1",
+                "7",
+                "11",
+                "13",
+                "25",
+                "49"
+            ],
+            "name": "LaserNum"
+        },
+        {
+            "conditions": [
+                "...",
+                "框架点",
+                "点云",
+                "网格"
+            ],
+            "name": "MatchMode"
+        },
+        {
+            "conditions": [
+                "...",
+                "普通",
+                "反光"
+            ],
+            "name": "ObjectType"
+        },
+        {
+            "conditions": [
+                "...",
+                "扫描挡位值",
+                "标志点算法参数"
+            ],
+            "name": "ParamsType"
+        }
+    ],
+    "configNum": 6
+}

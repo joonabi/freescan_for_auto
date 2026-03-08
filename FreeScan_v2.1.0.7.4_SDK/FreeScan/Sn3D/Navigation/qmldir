@@ -1,0 +1,3 @@
+﻿module Sn3D.Navigation
+plugin pluginSn3DNavigation
+typeinfo navigation.qmltypes

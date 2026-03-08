@@ -1,0 +1,29 @@
+{
+    "Plugin": {
+        "CommandPluginDirPath": "logic",
+		"DevicePluginDirPath":"device",
+		"LoadCommandPluginList":["3DDigitalSyncInterface.2.64"]
+    },
+    "Tunnel": {
+        "HostAddress": "LocalHost", 
+        "Port": 1883,
+		"Channel":"demo"
+    },
+	"Log":{		
+		"IsWrite":1,
+		"LogPath":"",
+		"LogLevel":4,
+		"LogTotalBufSize":0
+	},
+	"SharedMemory":{
+		"Name":"demo",
+		"Size":2147483648
+	},
+	"EP2XWVirtual":{
+		"transportType":1
+	},
+	"Default":{
+		"ZmqUrl":"10.80.154.63"
+	}
+	
+}

@@ -1,0 +1,1069 @@
+{
+    "LASER_SCAN_MODE_NULL": {
+        "NO_FILTER": {
+            "COMBO_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LASERTYPE_NULL": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_14": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_22": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_5": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_7": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98_MARKALGIN": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UE_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            }
+        },
+        "STRONG_LIGHT_OFF": {
+            "COMBO_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LASERTYPE_NULL": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_14": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_22": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_5": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_7": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98_MARKALGIN": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UE_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            }
+        },
+        "STRONG_LIGHT_ON": {
+            "COMBO_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LASERTYPE_NULL": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_14": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_22": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_5": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_7": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98_MARKALGIN": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UE_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            }
+        }
+    },
+    "LASER_SCAN_MODE_POINT": {
+        "NO_FILTER": {
+            "COMBO_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LASERTYPE_NULL": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_14": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_22": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_5": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_7": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98_MARKALGIN": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UE_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            }
+        },
+        "STRONG_LIGHT_OFF": {
+            "COMBO_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LASERTYPE_NULL": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_14": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_22": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_5": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_7": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98_MARKALGIN": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP2_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 10
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UE_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            }
+        },
+        "STRONG_LIGHT_ON": {
+            "COMBO_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "COMBO_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LASERTYPE_NULL": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_14": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_22": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_5": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_7": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "LINE_98_MARKALGIN": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 7
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 9
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP2_LINE_50": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UEP_LINE_26": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            },
+            "UE_LINE_1": {
+                "MATERIAL_DARK": {
+                    "curBrightness": 3
+                },
+                "MATERIAL_NORMAL": {
+                    "curBrightness": 2
+                },
+                "MATERIAL_REFLECT": {
+                    "curBrightness": 0
+                },
+                "MATERIAL_UNDEFINED": {
+                    "curBrightness": 0
+                }
+            }
+        }
+    },
+    "cmd": "upgradeJsonParam"
+}

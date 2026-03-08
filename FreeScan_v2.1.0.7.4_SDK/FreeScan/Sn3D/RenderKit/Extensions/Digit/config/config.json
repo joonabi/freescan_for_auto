@@ -1,0 +1,29 @@
+{
+    "default": {
+        "needWatcher": true,
+        "enableGamma": false,
+        "meshSingleColorAmbFactor": 0.35,
+        "meshSingleColorDiffFactor": 0.58,
+        "meshSingleColorSpecFactor": 0.11,
+        "meshSingleColorShininess": 68,
+        "meshSingleColorGamma": 1.0,
+        "meshVertexColorAmbFactor": 0.85,
+        "meshVertexColorDiffFactor": 0.3,
+        "meshVertexColorSpecFactor": 0.5,
+        "meshVertexColorShininess": 512,
+        "meshVertexColorGamma": 1.0,
+        "meshTextureColorAmbFactor": 0.95,
+        "meshTextureColorDiffFactor": 0.05,
+        "meshTextureColorSpecFactor": 0.15,
+        "meshTextureColorShininess": 256,
+        "meshTextureColorGamma": 1.0,
+        "pointSingleColorAmbFactor": 0.37,
+        "pointSingleColorDiffFactor": 0.53,
+        "pointSingleColorSpecFactor": 0.17,
+        "pointSingleColorShininess": 128,
+        "pointVertexColorAmbFactor": 0.37,
+        "pointVertexColorDiffFactor": 0.53,
+        "pointVertexColorSpecFactor": 0.17,
+        "pointVertexColorShininess": 128
+    }
+}

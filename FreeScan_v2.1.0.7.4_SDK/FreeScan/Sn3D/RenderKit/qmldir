@@ -1,0 +1,4 @@
+﻿module Sn3D.RenderKit
+plugin pluginrenderkit
+classname RenderKitPlugin
+typeinfo plugin.qmltypes

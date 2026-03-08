@@ -1,0 +1,21 @@
+#ifndef APPLICATION_VERSION_DEF_H
+#define APPLICATION_VERSION_DEF_H
+
+//===========================================================================
+//  Function:编译相关信息(此文件自动生成,不要做任何变更!)
+//  Author:                       by QIYI
+//  Time:                         2021.04.25 edit
+//===========================================================================
+
+#define APPLICATION_VERSION "${PROJECT_VERSION}"
+
+#define APPLICATION_TIMESTAMP "${BUILD_TIMESTAMP}"
+
+#define FREESCANSYNC_VERSION "${FreeScanSync_version}"
+
+#define SN3DPOSTPROCESS_VERSION "${Sn3DPostProcess_version}"
+
+#define SN3DMEASUREMENT_VERSION "${Sn3DMeasurement_version}"
+
+
+#endif

@@ -1,0 +1,19 @@
+# Visual Studio build artifacts
+.vs/
+build/
+*.vsidx
+*.suo
+*.user
+*.sln.docstates
+
+# Log files
+*.log
+FreeScan_v2.1.0.7.4_SDK/FreeScan/log/
+FreeScan_v2.1.0.7.4_SDK/FreeScan/EFTSdkLog/
+
+# Embedded git repo (submodule - handle separately if needed)
+FreeScan_v2.1.0.7.4_SDK/freescansdk/sn3dsdkdemo/SDKCPlusDemo/
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -1,0 +1,5 @@
+日志config说明:
+	LogMinLevel : 0-3（Info Warning Error Fatal四个等级，控制输出大于等于该等级的日志输出）
+	LogEqualLevelOn : true（只输出等级和LogFlagv相等的日志）false（输出所有小于等于LogFlagv等级的日志）
+	LogFlagv : 配合LogEqualLevelOn使用（一定要注意当LogEqualLevelOn为false时该标志位的值是否大于最大日志等级）
+	LogMaxSize : 单个日志最大值

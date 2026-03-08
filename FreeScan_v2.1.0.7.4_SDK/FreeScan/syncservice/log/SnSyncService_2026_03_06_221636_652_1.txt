@@ -1,0 +1,17 @@
+2026-03-06 22:16:36.767 : 44960 : SnSyncTool : debug : 350 : main : "Active code page: 437\r\nOk.\r\n\r\n"
+2026-03-06 22:16:36.768 : 44960 : SnSyncTool : info : 46 : TunnelMgr::init : tunnel mgr initing...
+2026-03-06 22:16:36.768 : 44960 : SnSyncTool : info : 69 : TunnelMgr::init : init connect hub port:  1883
+2026-03-06 22:16:36.770 : 44960 : SnSyncTool : info : 95 : TunnelMgr::init : "demo" 2147483648
+2026-03-06 22:16:36.770 : 44960 : SnSyncTool : info : 29 : PluginMgr::init : plugin mgr initing...
+2026-03-06 22:16:36.770 : 44960 : SnSyncTool : info : 43 : PluginMgr::init : load  "3DDigitalSyncInterface.2.64"
+2026-03-06 22:16:36.771 : 44960 : SnSyncService : debug : 334 : SnSyncCore::CommandManager::loadSpecifyVersionPlugin : load device plugin  "C:/SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan_v2.1.0.7.4_SDK/FreeScan/syncservice/logic/3DDigitalSyncInterface.2.64.9-alpha.16.dll"
+2026-03-06 22:16:36.774 : 44960 : SnSyncService : info : 164 : DigitalSyncPlugin::init : init controller handle  0x27a894b2850
+2026-03-06 22:16:36.774 : 44960 : SnSyncTool : info : 123 : TunnelMgr::connectToHub : start connect to hub
+2026-03-06 22:16:36.802 : 44960 : SnSyncTool : info : 76 : SnSyncServiceApp::initInternal : SnSyncService initial finish
+2026-03-06 22:16:36.802 : 44960 : SnSyncTool : info : 382 : main : log config buf size:  0 , log used size:  274876
+2026-03-06 22:16:36.806 : 44960 : SnSyncTool : info : 161 : TunnelMgr::onModuleConnected : module connected to hub
+2026-03-06 22:16:36.807 : 44960 : SnSyncTool : info : 81 : SnSyncServiceApp::onHubConnectResult : 0
+2026-03-06 22:16:36.807 : 44960 : SnSyncTool : info : 98 : SnSyncServiceApp::initOther : initing other...
+2026-03-06 22:16:59.480 : 43588 : SnSyncTool : info : 79 : PluginMgr::recvExecuteSignal::::operator() : recvExecuteSignal begin, plugin: "3DDigitalSyncInterface"  cmd: "setFlagBitInterface"  params: (QVariant(std::nullptr_t, (nullptr)), QVariant(QString, "ImageStream"), QVariant(bool, false))
+2026-03-06 22:16:59.480 : 43588 : SnSyncService : critical : 1152 : DigitalSyncPlugin::setFlagBitInterface : node is invalid
+2026-03-06 22:16:59.480 : 43588 : SnSyncTool : info : 89 : PluginMgr::recvExecuteSignal::::operator() : end, SnSyncTool::Exception: CommandsInvalidHandleError:node is invalid

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<calibration>
+	<!-- 标定类型 -->
+	<type>99</type>
+	<!-- 是否存图 -->
+	<saveCalibImages>1</saveCalibImages>
+	<!-- 是否读图 -->
+	<readImages>0</readImages>
+	<!-- 存图路径 -->
+	<savePath>./res/FreeScanUEPro2</savePath>
+	<isCreateImgPath>false</isCreateImgPath>
+	<!-- 位姿计算算法接口 每个设备及标定板不一样需要配置 -->
+	<poseAlgMethod>trackMarkerWithDep</poseAlgMethod>
+	<!-- 光平面标定计算 -->
+	<laserAlgMthod>runLaserRebuildTy</laserAlgMthod>
+	<!-- 降采样计算 -->
+	<downSampleCalc>true</downSampleCalc>
+	<!-- 数据保存 -->
+	<saveCalibData>true</saveCalibData>
+	<!-- 写设备区间 -->
+	<writeAreas>2</writeAreas>
+	<commands>
+		<command0 type="init">
+			<!-- 设备指令相关 -->
+			<DevCommand>
+				<!-- 开关流 -->
+				<stream>true</stream>
+				<!--<downSampling>false</downSampling> -->
+				<!-- 触发周期 ms -->
+				<triggerPeriod>20</triggerPeriod>
+				<gainExp>
+					<GE1 gain="200" exp="2000" />
+					<GE2 gain="200" exp="2000" />
+				</gainExp>
+				<ExtractPointArea>1</ExtractPointArea>
+				<ExtractPointSize>80</ExtractPointSize>
+				<WorkMode>3</WorkMode>
+				<led>0</led>
+				<project></project>
+				<!-- 激光配置 -->
+				<laser>
+					<!-- 激光线亮度 -->
+					<LAS1 cross="true" grade="25" luminance="1980" type="1" />
+					<LAS2 cross="false" grade="1" luminance="1000" type="1" />
+					<LAS2 cross="false" grade="7" luminance="1000" type="1" />
+					<!-- 激光线投射模式 -->
+					<laserNum>0</laserNum>
+				</laser>
+				<turnTable>
+				</turnTable>
+			</DevCommand>
+			<!-- 界面指令 -->
+			<UICommand>
+				<!-- 当前标定第几组 -->
+				<setGroupIndex param="22" />
+				<!-- 大圆中心偏移 -->
+				<setOffset offset="0" />
+				<!-- 标定板旋转 -->
+				<rotation angle="0" />
+			</UICommand>
+			<!-- 算法指令 -->
+			<AlgCommand>
+			</AlgCommand>
+		</command0>
+		<command1 type="finish">
+			<!-- 设备指令相关 -->
+			<DevCommand>
+				<!-- 开关流 -->
+				<stream>false</stream>
+				<laser>
+					<laserNum>0</laserNum>
+				</laser>
+				<led>0</led>
+			</DevCommand>
+			<!-- 界面指令 -->
+			<UICommand>
+			</UICommand>
+			<!-- 算法指令 -->
+			<AlgCommand>
+			</AlgCommand>
+		</command1>
+	</commands>
+	<positionInfo>
+		<!-- 设备旋转角度 -->
+		<angle x="0" y="0" z="180" thresX="10" thresY="10" thresZ="10" />
+		<!-- 设备中心投射到标定板位置 -->
+		<pt x="0" y="0" z="0" thresDim="40" thresHeight="10" offsetX="0" offsetY="0" />
+	</positionInfo>
+	<!-- 图片类型/命名相关 -->
+	<captureInfo>
+		<cameras count="2">
+			<camera0>
+				<!-- 是否旋转 -->
+				<!-- 
+				<rotation transpose="0" flip="0" />
+				-->
+				<!-- 是否裁剪 -->
+				<UEPro2clip type="1" x="0" y="0" width="768" height="1024" />
+				<!-- ROI裁剪 -->
+				<!-- 
+				<clipInfo type="ROI">	
+					<clipParam x="0" y="0" width="0" height="0"/>
+				</clipInfo> 
+				-->
+				<!-- 格式转换信息 -->
+				<formatInfo></formatInfo>
+			</camera0>
+			<camera1>
+				<!-- 是否旋转 -->
+				<!-- 
+				<rotation transpose="0" flip="0" />
+				-->
+				<!-- 是否裁剪 -->
+				<UEPro2clip type="1" x="0" y="0" width="768" height="1024" />
+				<!-- ROI裁剪 -->
+				<!-- 
+				<clipInfo type="ROI" x="0" y="0" width="0" height="0" />
+				-->
+				<!-- 格式转换信息 -->
+				<formatInfo></formatInfo>
+			</camera1>
+		</cameras>
+	</captureInfo>
+	<groups count="6">
+		<!-- 垂直相机 交叉13线 单线 -->
+		<group0 name="" count="25" distanceMid="200" distanceMax="450">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<gainExp>
+							<GE1 gain = "200" exp="2000" />
+							<GE2 gain = "200" exp="2000" />
+						</gainExp>
+						<!-- 开补光灯 -->
+						<led>800</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>13</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="22" />
+						<!-- 大圆中心偏移 -->
+						<setOffset offset="0" />
+					</UICommand>
+				</command0>
+			</commands>
+			<!-- 图片类型/命名相关 -->
+			<captureInfo>
+				<frames count="2">
+					<frame0 type="3" grade="25">
+						<pictures>
+							<!-- X_X_X_X_groupIndex_stepIndex -->
+							<picture0 name="Left_Laser25_Cross_UpSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_UpSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_UpSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_UpSide_%1_%2" />
+						</pictures>
+					</frame0>
+					<frame1 type="4" grade="25">
+						<pictures>
+							<picture0 name="Left_Laser25_Cross_DownSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_DownSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_DownSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_DownSide_%1_%2" />
+						</pictures>
+					</frame1>
+				</frames>
+			</captureInfo>
+			<!-- UEP 13线 -->
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+				<step9 valid="true">
+					 
+				</step9>
+				<step10 valid="true">
+					 
+				</step10>
+				<step11 valid="true">
+					 
+				</step11>
+				<step12 valid="true">
+					 
+				</step12>
+				<step13 valid="true">
+					 
+				</step13>
+				<step14 valid="true">
+					 
+				</step14>
+				<step15 valid="true">
+					 
+				</step15>
+				<step16 valid="true">
+					 
+				</step16>
+				<step17 valid="true">
+					 
+				</step17>
+				<step18 valid="true">
+					 
+				</step18>
+				<step19 valid="true">
+					 
+				</step19>
+				<step20 valid="true">
+					 
+				</step20>
+				<step21 valid="true">
+					 
+				</step21>
+				<step22 valid="true">
+					 
+				</step22>
+				<step23 valid="true">
+					 
+				</step23>
+				<step24 valid="true">
+					 
+				</step24>
+			</steps>
+		</group0>
+		<group1 name="" count="25" distanceMid="450" distanceMax="700">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<gainExp>
+							<GE1 gain = "200" exp="2000" />
+							<GE2 gain = "200" exp="2000" />
+						</gainExp>
+						<!-- 开补光灯 -->
+						<led>800</led>
+						<!-- 激光配置 -->
+						<laser>
+							<!-- 激光线投射模式 -->
+							<laserNum>13</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="23" />
+						<!-- 大圆中心偏移 -->
+						<setOffset offset="0" />
+					</UICommand>
+				</command0>
+			</commands>
+			<!-- 图片类型/命名相关 -->
+			<captureInfo>
+				<frames count="2">
+					<frame0 type="3" grade="25">
+						<pictures>
+							<!-- X_X_X_X_groupIndex_stepIndex -->
+							<picture0 name="Left_Laser25_Cross_UpSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_UpSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_UpSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_UpSide_%1_%2" />
+						</pictures>
+					</frame0>
+					<frame1 type="4" grade="25">
+						<pictures>
+							<picture0 name="Left_Laser25_Cross_DownSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_DownSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_DownSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_DownSide_%1_%2" />
+						</pictures>
+					</frame1>
+				</frames>
+			</captureInfo>
+			<!-- UEP 13线 -->
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+				<step9 valid="true">
+					 
+				</step9>
+				<step10 valid="true">
+					 
+				</step10>
+				<step11 valid="true">
+					 
+				</step11>
+				<step12 valid="true">
+					 
+				</step12>
+				<step13 valid="true">
+					 
+				</step13>
+				<step14 valid="true">
+					 
+				</step14>
+				<step15 valid="true">
+					 
+				</step15>
+				<step16 valid="true">
+					 
+				</step16>
+				<step17 valid="true">
+					 
+				</step17>
+				<step18 valid="true">
+					 
+				</step18>
+				<step19 valid="true">
+					 
+				</step19>
+				<step20 valid="true">
+					 
+				</step20>
+				<step21 valid="true">
+					 
+				</step21>
+				<step22 valid="true">
+					 
+				</step22>
+				<step23 valid="true">
+					 
+				</step23>
+				<step24 valid="true">
+					 
+				</step24>
+			</steps>
+		</group1>
+		<group2 name="" count="25" distanceMid="700" distanceMax="950">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<gainExp>
+							<GE1 gain = "200" exp="2000" />
+							<GE2 gain = "200" exp="2000" />
+						</gainExp>
+						<!-- 开补光灯 -->
+						<led>800</led>
+						<!-- 激光配置 -->
+						<laser>
+							<LAS1 cross="true" grade="13" luminance="6000" type="1" />
+							<!-- 激光线投射模式 -->
+							<laserNum>13</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="24" />
+						<!-- 大圆中心偏移 -->
+						<setOffset offset="0" />
+					</UICommand>
+				</command0>
+			</commands>
+			<!-- 图片类型/命名相关 -->
+			<captureInfo>
+				<frames count="2">
+					<frame0 type="3" grade="25">
+						<pictures>
+							<!-- X_X_X_X_groupIndex_stepIndex -->
+							<picture0 name="Left_Laser25_Cross_UpSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_UpSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_UpSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_UpSide_%1_%2" />
+						</pictures>
+					</frame0>
+					<frame1 type="4" grade="25">
+						<pictures>
+							<picture0 name="Left_Laser25_Cross_DownSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_DownSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_DownSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_DownSide_%1_%2" />
+						</pictures>
+					</frame1>
+				</frames>
+			</captureInfo>
+			<!-- UEP 13线 -->
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+				<step9 valid="true">
+					 
+				</step9>
+				<step10 valid="true">
+					 
+				</step10>
+				<step11 valid="true">
+					 
+				</step11>
+				<step12 valid="true">
+					 
+				</step12>
+				<step13 valid="true">
+					 
+				</step13>
+				<step14 valid="true">
+					 
+				</step14>
+				<step15 valid="true">
+					 
+				</step15>
+				<step16 valid="true">
+					 
+				</step16>
+				<step17 valid="true">
+					 
+				</step17>
+				<step18 valid="true">
+					 
+				</step18>
+				<step19 valid="true">
+					 
+				</step19>
+				<step20 valid="true">
+					 
+				</step20>
+				<step21 valid="true">
+					 
+				</step21>
+				<step22 valid="true">
+					 
+				</step22>
+				<step23 valid="true">
+					 
+				</step23>
+				<step24 valid="true">
+					 
+				</step24>
+			</steps>
+		</group2>
+		<group3 name="" count="25" distanceMid="950" distanceMax="1200">
+			<commands>
+				<command0 type="init">
+					<!-- 设备指令相关 -->
+					<DevCommand>
+						<gainExp>
+							<GE1 gain = "300" exp="2500" />
+							<GE2 gain = "300" exp="2500" />
+						</gainExp>
+						<!-- 开补光灯 -->
+						<led>800</led>
+						<!-- 激光配置 -->
+						<laser>
+							<LAS1 cross="true" grade="13" luminance="8000" type="1" />
+							<!-- 激光线投射模式 -->
+							<laserNum>13</laserNum>
+						</laser>
+					</DevCommand>
+					<!-- 界面指令 -->
+					<UICommand>
+						<!-- 当前标定第几组 -->
+						<setGroupIndex param="25" />
+						<!-- 大圆中心偏移 -->
+						<setOffset offset="0" />
+					</UICommand>
+				</command0>
+			</commands>
+			<!-- 图片类型/命名相关 -->
+			<captureInfo>
+				<frames count="2">
+					<frame0 type="3" grade="25">
+						<pictures>
+							<!-- X_X_X_X_groupIndex_stepIndex -->
+							<picture0 name="Left_Laser25_Cross_UpSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_UpSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_UpSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_UpSide_%1_%2" />
+						</pictures>
+					</frame0>
+					<frame1 type="4" grade="25">
+						<pictures>
+							<picture0 name="Left_Laser25_Cross_DownSide_%1_%2" />
+							<picture1 name="Right_Laser25_Cross_DownSide_%1_%2" />
+							<picture2 name="Left_Laser25Image_Cross_DownSide_%1_%2" />
+							<picture3 name="Right_Laser25Image_Cross_DownSide_%1_%2" />
+						</pictures>
+					</frame1>
+				</frames>
+			</captureInfo>
+			<!-- UEP 13线 -->
+			<steps>
+				<step0 valid="true">
+					 
+				</step0>
+				<step1 valid="true">
+					 
+				</step1>
+				<step2 valid="true">
+					 
+				</step2>
+				<step3 valid="true">
+					 
+				</step3>
+				<step4 valid="true">
+					 
+				</step4>
+				<step5 valid="true">
+					 
+				</step5>
+				<step6 valid="true">
+					 
+				</step6>
+				<step7 valid="true">
+					 
+				</step7>
+				<step8 valid="true">
+					 
+				</step8>
+				<step9 valid="true">
+					 
+				</step9>
+				<step10 valid="true">
+					 
+				</step10>
+				<step11 valid="true">
+					 
+				</step11>
+				<step12 valid="true">
+					 
+				</step12>
+				<step13 valid="true">
+					 
+				</step13>
+				<step14 valid="true">
+					 
+				</step14>
+				<step15 valid="true">
+					 
+				</step15>
+				<step16 valid="true">
+					 
+				</step16>
+				<step17 valid="true">
+					 
+				</step17>
+				<step18 valid="true">
+					 
+				</step18>
+				<step19 valid="true">
+					 
+				</step19>
+				<step20 valid="true">
+					 
+				</step20>
+				<step21 valid="true">
+					 
+				</step21>
+				<step22 valid="true">
+					 
+				</step22>
+				<step23 valid="true">
+					 
+				</step23>
+				<step24 valid="true">
+					 
+				</step24>
+			</steps>
+		</group3>
+	</groups>
+</calibration>

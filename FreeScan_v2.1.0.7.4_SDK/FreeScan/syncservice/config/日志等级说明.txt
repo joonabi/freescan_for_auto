@@ -1,0 +1,5 @@
+日志config说明:
+LOG:
+	IsWrite: 0 (关闭同步库日志输出) 1 (打开同步库日志输出)
+	LogLevel: 0-4 (Debug、Info、Warning、Critical四个等级，4表示所有等级日志全部输出)
+	LogTotalBufSize：日志目录内存存储上限，单个日志文件上限是总存储上限的十分之一

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appbox>
+    <name>app2</name> //应用程序名字
+	<config>
+		<filename>./config/app1.db</filename> //配置数据库路径
+		<password>2021shining3D</password> // 明文保存密码不合理，稍后调整
+		<table>config</table>
+		<prefix></prefix>
+	</config>
+    <topics>
+		<!-- 启动前检查主题PrestartCheckTopic-->
+		<topic>
+		  <type>request</type>
+		  <name>PrestartCheckTopic</name>
+		  <publishers>
+			<!-- PrestartCheckController-->
+			<publisher>
+			  <name>PrestartCheckController</name>
+			  <type>remote/local</type>
+			  <remoteaddr>addrtype:127.0.0.1:1883</remoteaddr>
+			  <wrappedobjects>
+				<wrappedobject>
+				  <controllerobject>
+					<ref_name>PrestartCheckController</ref_name>
+				  </controllerobject>
+				</wrappedobject>
+			  </wrappedobjects>
+			</publisher>
+		  </publishers>
+		  <subscribers>
+		  </subscribers>
+		</topic>
+        <topic>
+            <type>request</type>
+            <name>ScreenControllerTopic</name> 
+			<publishers>
+                <publisher>
+                    <name>ScreenController</name>
+                    <type>remote/local</type>
+                    <remoteaddr>addrtype:127.0.0.1:1883</remoteaddr>
+                    <wrappedobjects>
+						<wrappedobject>
+							<controllerobject>
+								<ref_name>ScreenController</ref_name> 
+							</controllerobject>
+						</wrappedobject>	
+                    </wrappedobjects>
+                </publisher>	
+			</publishers>
+			<!-- <subscribers> -->
+				<!-- <subscriber> -->
+                    <!-- <name>Sn3DAppHelpComponet</name> -->
+                    <!-- <type>remote</type> -->
+                    <!-- <remoteaddr>addrtype:127.0.0.1:1883</remoteaddr> -->
+                    <!-- <wrappedobjects> -->
+						<!-- <wrappedobject> -->
+							<!-- <controllerobject> -->
+								<!-- <ref_name>Sn3DAppHelpComponet</ref_name>  -->
+							<!-- </controllerobject> -->
+						<!-- </wrappedobject>	 -->
+                    <!-- </wrappedobjects> -->
+                <!-- </subscriber> -->
+			<!-- </subscribers> -->
+        </topic>
+		    <topic>
+            <type>request</type>
+            <name>Sn3DAppHelpTopic</name> 
+			<subscribers>
+                <subscriber>
+                    <name>ScreenController</name>
+                    <type>remote</type>
+                    <remoteaddr>addrtype:127.0.0.1:1883</remoteaddr>
+                    <wrappedobjects>
+						<wrappedobject>
+							<controllerobject>
+								<ref_name>ScreenController</ref_name> 
+							</controllerobject>
+						</wrappedobject>	
+                    </wrappedobjects>
+                </subscriber>	
+			</subscribers>
+        </topic>
+    </topics>
+	<controllerobjects>
+		<controllerobject>
+		<name>ScreenController</name>
+		<libpath>./BoostScreenControll</libpath>
+		<createparams>
+			<paramname>ScreenController</paramname>
+			<createorder>0</createorder>
+			<createtype>hunger</createtype>
+		</createparams>
+		</controllerobject>
+	</controllerobjects>
+</appbox>

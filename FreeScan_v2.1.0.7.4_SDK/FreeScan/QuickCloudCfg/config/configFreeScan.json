@@ -1,0 +1,239 @@
+{
+  "cloud": {
+    "urls": {
+      "captcha": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "status": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "userCodeLogin": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "getPassInfo": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "getOEMPrivacyColorInfoByType": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "userInfoValid": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "rbpwd": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "userLogin": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "apiApply": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "apiDelete": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "apiActionAudit": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "faqDelete": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "docAdd": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "dlpBind": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "dlpUnbind": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "AuthenticateCode": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "dentalFactoryOEMBatchSetting": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "dentalConnectionEdit": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "dentalFactoryOEMBatchDelete": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "addIndustryInfo": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "restoreIndustryFactorySettings": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "activeDownED": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "trialED": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "edTrialStatus": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "withdrawEdV2": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "productEDApplyV2": {
+        "requestType": "post",
+        "encryptType": "c2v"
+      },
+      "productEXTApply": {
+        "requestType": "post",
+        "encryptType": "c2v"
+      },
+      "productEDStatusV2": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "addDocs": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "changeDocs": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "delDocs": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "actionPlugin": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "pluginDetail": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "editPlugin": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "pluginInterfaceAvailableCallList": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "getUserProfile": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "clientPluginList": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "supplementPlugin": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "pluginUpgrade": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "fetchCountries": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "getPassInfoV2": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "getOEMPrivacyColorInfoByType": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "fetchLangs": {
+        "requestType": "get",
+        "encryptType": "null"
+      },
+      "userExistCheck": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "productEDApply": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "productEDStatus": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "collectorData": {
+        "requestType": "post",
+        "encryptType": "default"
+      },
+      "mupload": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "pleDetail": {
+        "requestType": "post",
+        "encryptType": "null"
+      },
+      "ipCountry": {
+        "requestType": "get",
+        "encryptType": "null"
+      }
+    },
+    "eventTracking": {
+      "body": {
+        "idsite": "2",
+        "rec": "1"
+      },
+      "headers": {
+        "X-Auth-AppID": "DOTAPI_ed119019-e5de-51b5-b8d4-11eb15ebad2e"
+      }
+    }
+  },
+  "logLevel": "debug",
+	"mqtt":{
+        "autoReconnect":true,
+        "autoReconnectInterval":3000,
+        "keepAlive":3000,
+        "isCleanSession":true
+    },
+    "startUpload":{
+         "chunkSize": 10
+     },
+    "startDownload":{
+        "chunkSize": 10
+     },
+    "autoUpgrade":{
+        "checkInterval":5
+     },
+    "software":{
+        "modelCode":"quickcloud",
+		"version":"1.0.0.0"
+     },
+    "cloudEnvironment":"production",
+    "logExpiredDateNum":7,
+    "openConsole":false,
+    "logToFile":false
+}
