@@ -222,7 +222,7 @@ ws.freeze_panes = 'D4'
 
 # ── Save ─────────────────────────────────────────────────────
 import os
-out_dir = '/home/user/freescan_for_auto/3d_scan/경찰청'
+out_dir = '/home/user/freescan_for_auto/3d_scan/police_korea'
 os.makedirs(out_dir, exist_ok=True)
 out_path = os.path.join(out_dir, '입찰규격비교.xlsx')
 wb.save(out_path)
